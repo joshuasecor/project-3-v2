@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :abouts
+  resources :abouts, only: :index
 
-  resources :appointments
+  resources :appointments, only: :index
 
-  resources :trainers
+  resources :trainers, only: :index
 
   root 'home#index'
 
