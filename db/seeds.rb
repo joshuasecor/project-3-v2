@@ -17,6 +17,6 @@ Service.create(name: 'Candlelight Yoga', description: 'Lorem ipsum dolor sit ame
 
 
 # New appointments
-Appointment.create(date: '2015-03-20', start_time: '2015-03-20 08:00:00', end_time: '2008-03-20 09:00:00')
-Appointment.create(date: '2015-03-20', start_time: '2015-03-20 09:00:00', end_time: '2008-03-20 10:00:00')
-Appointment.create(date: '2015-03-20', start_time: '2015-03-20 10:30:00', end_time: '2008-03-20 12:00:00')
+Appointment.create(service_id: '1', date: '2015-03-20', start_time: '2015-03-20 08:00:00', end_time: '2008-03-20 09:00:00')
+Appointment.create(service_id: '2', date: '2015-03-20', start_time: '2015-03-20 09:00:00', end_time: '2008-03-20 10:00:00')
+Appointment.create(service_id: '3', date: '2015-03-20', start_time: '2015-03-20 10:30:00', end_time: '2008-03-20 12:00:00')

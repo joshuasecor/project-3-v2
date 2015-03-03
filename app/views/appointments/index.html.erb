@@ -7,6 +7,8 @@
 	<div class="calendar">
 		<!-- Render all appointments -->
 		<% @appointments.each do |a| %>
+			Service: <%= a.service.name %>
+			<br><br>
 			Date: <%= a.date.strftime("%A") %>
 			<br><br>
 			Start Time: <%= a.start_time.strftime("%l:%M%P") %>
