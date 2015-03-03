@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150303021223) do
+ActiveRecord::Schema.define(version: 20150303214406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,7 +57,14 @@ ActiveRecord::Schema.define(version: 20150303021223) do
     t.text     "comment_text"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "user_id"
+    t.integer  "service_id"
+    t.integer  "trainer_id"
   end
+
+  add_index "comments", ["service_id"], name: "index_comments_on_service_id", using: :btree
+  add_index "comments", ["trainer_id"], name: "index_comments_on_trainer_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "faqs", force: :cascade do |t|
     t.text     "question"
@@ -78,7 +85,12 @@ ActiveRecord::Schema.define(version: 20150303021223) do
     t.boolean  "is_featured"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "level_id"
+    t.integer  "category_id"
   end
+
+  add_index "services", ["category_id"], name: "index_services_on_category_id", using: :btree
+  add_index "services", ["level_id"], name: "index_services_on_level_id", using: :btree
 
   create_table "trainers", force: :cascade do |t|
     t.string   "first_name"
@@ -102,4 +114,9 @@ ActiveRecord::Schema.define(version: 20150303021223) do
 
   add_foreign_key "appointments", "services"
   add_foreign_key "appointments", "trainers"
+  add_foreign_key "comments", "services"
+  add_foreign_key "comments", "trainers"
+  add_foreign_key "comments", "users"
+  add_foreign_key "services", "categories"
+  add_foreign_key "services", "levels"
 end
