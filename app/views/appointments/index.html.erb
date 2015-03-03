@@ -5,9 +5,19 @@
 	<h1>Our upcoming services</h1>
 
 	<div class="calendar">
-		Five column calendar with class name, instructor, start time, end time, date
+		<!-- Render all appointments -->
+		<% @appointments.each do |a| %>
+			Date: <%= a.date.strftime("%A") %>
+			<br><br>
+			Start Time: <%= a.start_time.strftime("%l:%M%P") %>
+			<br><br>
+			End Time: <%= a.end_time.strftime("%l:%M%P") %>
+			<hr>
+		<% end %>
 	</div>
+
 	<br />
+
 	<div class="services_list">
 		Content describing services
 	</div>
@@ -18,4 +28,3 @@
 
 
 <%= render 'layouts/footer' %>
-
