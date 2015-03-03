@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :trainers, only: :index
 
+  resources :services, only: [:index, :show]
+
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
