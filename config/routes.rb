@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :services, only: [:index, :show]
 
   resources :home, only: :index
+  get 'about', to: 'abouts#index'
 
   root 'home#index'
 
