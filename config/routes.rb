@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :appointments, only: :index
 
-  resources :trainers, only: :index
+  resources :trainers, only: [:index, :show]
 
   resources :services, only: [:index, :show]
 
