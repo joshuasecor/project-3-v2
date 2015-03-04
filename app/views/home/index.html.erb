@@ -5,11 +5,34 @@
 	<div class="carousel">
 		Hero image that cycles through multiple photos
 	</div>
-	<div class="about_text">
-		This is where the studio's about content will live
+	<br><br>
+	<hr>
+	<div class="featured_services">
+		<% @services.where(is_featured: 'true').each do |s| %>
+		<div>
+			<%= link_to s.name, s %> <br><br>
+			<%= s.description %>
+		</div>
+		<br>
+		<% end %>
 	</div>
-	<div class="featured_service">
-			Featured services or events
+	<br>
+	<hr>
+	<div class="about_text">
+		ABOUT US: <br><br>
+		<%= @about.about_text %>
+	</div>
+	<br><br>
+	<hr>
+	MEET THE INSTRUCTORS AT BRANCH STUDIO: <br><br>
+	<div class="homepage_instructors">
+		<% @trainers.each do |t| %>
+		<div>
+			<%= link_to (t.first_name + ' ' + t.last_name), t %> <br><br>
+			<%= t.bio %>
+		</div>
+		<br>
+		<% end %>
 	</div>
 
 </div>
