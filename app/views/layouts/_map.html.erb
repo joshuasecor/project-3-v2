@@ -1,0 +1,50 @@
+<div class="container">
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLE_API_KEY']%>"></script>
+ <script type="text/javascript">  
+ 	function initialize() { 
+ 		var myLatlng = new google.maps.LatLng(34.02369, -118.5055);
+ 		var mapOptions = { 
+ 			center: myLatlng, 
+ 			zoom: 15
+ 		}; 
+ 		var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions); 
+
+		var contentString = 
+		 	'<div id="content">'+
+	    '<div id="siteNotice">'+
+	    '</div>'+
+	    '<h1 id="firstHeading" class="firstHeading">Branch Studio</h1>'+
+	    '<div id="bodyContent">'+
+	    '<p><b>Branch Studio</b>, founded in 2015, is a progressive ' +
+	    'yoga studio located in Santa Monica, California right off the Pacific '+
+	    'Ocean.  Branch was founded to bring yoga to the people of '+
+	    'WDI, focusing on flexibility, strength and peace of mind. '+
+	    'We offer a full schedule of classes, special events and training '+
+	    'in a fun, low-stress environment.'+
+	    '</p>'+
+	    '</div>'+
+	    '</div>';
+	 	
+	 	var infowindow = new google.maps.InfoWindow({
+      content: contentString
+  	});
+
+ 		var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    title:"Branch Studio!"
+		});
+
+		google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  	});
+	} 
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</div>
+
+<div id="map-container">
+	<div id="map-canvas">
+	</div>
+</div>
