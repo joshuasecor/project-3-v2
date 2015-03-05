@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'contact', to: 'messages#new', as: 'contact'
+
+  #get 'messages/new'
+
+  #get 'messages/create'
+
   resources :dashboard, only: :index
 
   resources :abouts, only: :index
