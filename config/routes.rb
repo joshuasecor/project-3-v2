@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'contact', to: 'messages#new', as: 'contact'
+
+  #get 'messages/new'
+
+  #get 'messages/create'
+
   resources :dashboard, only: :index
 
   resources :abouts, only: :index
@@ -10,10 +16,15 @@ Rails.application.routes.draw do
 
   resources :services, only: [:index, :show]
 
+  resources :users
+
   resources :home, only: :index
   get 'about', to: 'abouts#index'
 
   root 'home#index'
+
+  # get '/:bs' => 'home#index'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

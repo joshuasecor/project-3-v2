@@ -8,6 +8,7 @@
 					<%= link_to 'SERVICES', appointments_path, "data-no-turbolink" => true  %> &nbsp; 
 					<%= link_to 'TRAINERS', trainers_path, "data-no-turbolink" => true %> &nbsp;
 					<%= link_to 'CONTACT', '/about', "data-no-turbolink" => true %> &nbsp;
+					<a type="button" class="btn" href="#login_modal" data-toggle="modal">LOGIN</a>
 				</div>
 		</div>
 		<div class="header_hamburger">
@@ -15,4 +16,19 @@
 		</div>
 		
 	</div>
+
+</div>
+
+<hr />
+
+<div class="modal fade" id="login_modal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">&times;</a>
+    <h3>Modal Header</h3>
+  </div>
+  <div class="modal-body">
+    <p>Test Modal</p>
+  </div>
+  <%= render "layouts/login" %>
+
 </div>

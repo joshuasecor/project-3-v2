@@ -1,0 +1,7 @@
+
+<%= form_for find_user do |f| %>
+	<%= f.text_field :email, placeholder: "email", autofocus: true %><br><br>
+	<%= f.password_field :password, placeholder: "password" %><br><br>
+	<%= f.password_field :password_confirmation, placeholder: "confirm password" %><br><br>
+	<%= f.submit "Signup", class: "btn btn-primary" %>
+<% end %>
