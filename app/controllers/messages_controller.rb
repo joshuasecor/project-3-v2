@@ -1,6 +1,8 @@
 class MessagesController < ApplicationController
+
  	def new
     @message = Message.new
+    @about = About.last
 	end
 
   def create
