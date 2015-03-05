@@ -36,10 +36,22 @@
 	width: 100%; 
 }
 
+
+// HEADER
+
+.header{
+	margin-top: 20px;
+}
+
+
+
+// FOOTER
+
 .footer{
 	float: right;
 	width: 100%;
 	position: relative;
+	margin-bottom: 20px; 
 }
 
 .twitter_share{
@@ -64,7 +76,7 @@ transform-origin: top left;
 #login_modal{
   width: 750px;
   height: 500px;
-  border-radius: 15px;
+  border-radius: 5px;
   margin: 0 auto;
   margin-top: 50px;
   padding-left: 25px;
