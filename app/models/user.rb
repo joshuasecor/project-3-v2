@@ -3,6 +3,7 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
+	include ActiveModel::Validations
 
 	# "dependent: :destroy" means that if a user is deleted, all of their comments are also deleted.
 	has_many :comments, dependent: :destroy
@@ -10,8 +11,7 @@ class User < ActiveRecord::Base
 	# This is a bcrpyt method.
 	has_secure_password
 
-	# When a new user is created, both their username and email must original.
-	validates :username, uniqueness: true
+	# When a new user is created, there email must original.
 	validates :email, uniqueness: true
 
 end
