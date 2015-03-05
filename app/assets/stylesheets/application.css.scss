@@ -14,10 +14,29 @@
  *= require_self
  */
 @import 'bootstrap';
- 
+
+
 
 .container{
+width: 1140px;
+background-color: #f6f6f6;
+}
 
+h1{
+
+}
+
+h2{
+	height: 9px;
+}
+.nav_links{
+	padding: 0 0 40px 0;
+	font-color: #414042;
+
+}
+.header{
+	border-bottom: 2px dashed #00b9ce;
+	margin-bottom: 50px;
 }
 
 #map-container {
