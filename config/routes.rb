@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   get 'contact', to: 'messages#new', as: 'contact'
   post 'contact', to: 'messages#create'
 
-  resources :dashboard, only: :index
-
   resources :abouts, only: :index
 
   resources :appointments, only: :index
@@ -18,6 +16,14 @@ Rails.application.routes.draw do
   resources :home, only: :index
 
   resources :sessions, only: [:new, :create, :destroy]
+
+  resources :dashboard, only: :index
+
+  namespace :dashboard do
+    resources :appointments, only: :index
+    resources :services, only: :index
+    resources :trainers, only: :index
+  end
 
   root 'home#index'
 
