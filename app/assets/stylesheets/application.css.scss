@@ -17,42 +17,8 @@
 
 
 .container{
-width: 1140px;
 background-color: #f6f6f6;
 }
-
-h1{
-
-}
-
-h2{
-	height: 9px;
-}
-.nav_links{
-	padding: 0 0 40px 0;
-	font-color: #414042;
-
-}
-.header{
-	border-bottom: 2px dashed #00b9ce;
-	margin-bottom: 50px;
-}
-
-#map-container {
-	height: 400px; 
-	border-radius: 16px 16px; 
-	border-color: #fff; 
-	border-style: solid; 
-	box-shadow: 2px 2px 10px #B1B1B1; 
-	margin-top: 25px; 
-	border-width: 7px; 
-} 
-
-#map-canvas { 
-	height: 384px; 
-	width: 100%; 
-}
-
 
 // HEADER
 
@@ -105,4 +71,21 @@ transform-origin: top left;
 	margin: 0 auto;
 }
 
+// MAP
 
+#map-container {
+	position: relative;
+	max-height: 400px;
+  padding-bottom: 40%; // This is the aspect ratio
+ 	width: 100%;
+  overflow: hidden;
+} 
+
+#map-canvas { 
+	position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important; 
+  max-height: 400px;
+}

@@ -10,7 +10,8 @@ class MessagesController < ApplicationController
     
     if @message.valid?
       MessageMailer.new_message(@message).deliver_now
-      redirect_to home_index_path
+      flash[:alert] = "Your message was sent. We will respond shortly."
+      redirect_to contact_path
     else
       flash[:alert] = "An error occurred while delivering this message."
       redirect_to contact_path

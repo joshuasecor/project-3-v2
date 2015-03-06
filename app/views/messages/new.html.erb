@@ -1,12 +1,27 @@
-  <%= render "contact_form" %>
+<div class="container">
 
-<br>
+		<% flash.each do |key, value| %>
+	    <div class="alert alert-<%= key %>"><%= value %></div>
+	  <% end %>
+	 
+	<div id="submit_form">
+		<h3> Contact </h3>
+	  <%= render "contact_form" %>
+	</div>
 
-  <%= render "layouts/map" %>
+	<br>
+	<div id="google_map">
+		<h3> Visit Branch Studio </h3>
+		<%= render "layouts/map" %>
+	</div>
 
-<br>
 
-<%= @about.address_line_1 %> <br>
-<%= @about.address_line_2 %> <br>
-<%= @about.city %> <%= @about.state %> <%= @about.zip %> <br>
-<%= @about.phone %>
+	<br>
+	<div id="contact_about">
+		<%= @about.address_line_1 %><br>
+		<%= @about.address_line_2 %><br>
+		<%= @about.city %> <%= @about.state %> <%= @about.zip %> <br>
+		<%= @about.phone %>
+	</div>
+
+</div>
