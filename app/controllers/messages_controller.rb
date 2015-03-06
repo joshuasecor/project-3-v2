@@ -9,11 +9,11 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     
     if @message.valid?
-      MessageMailer.new_message(@message).deliver
-      redirect_to contact_path, notice: "Your messages has been sent."
+      MessageMailer.new_message(@message).deliver_now
+      redirect_to home_index_path
     else
       flash[:alert] = "An error occurred while delivering this message."
-      render :new
+      redirect_to contact_path
     end
   end
 
