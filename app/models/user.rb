@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
 
 	# When a new user is created, there email must original.
 	validates :email, uniqueness: true
+	validates_presence_of :email
 
 end
 

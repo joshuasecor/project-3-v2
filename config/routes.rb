@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
 
   get 'contact', to: 'messages#new', as: 'contact'
-
-  #get 'messages/new'
-
-  #get 'messages/create'
+  post 'contact', to: 'messages#create'
 
   resources :dashboard, only: :index
 
@@ -19,7 +16,6 @@ Rails.application.routes.draw do
   resources :users
 
   resources :home, only: :index
-  get 'about', to: 'abouts#index'
 
   root 'home#index'
 
