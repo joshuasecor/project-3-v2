@@ -13,9 +13,11 @@ Rails.application.routes.draw do
 
   resources :services, only: [:index, :show]
 
-  resources :users
+  resources :users, only: [:new, :create, :show, :destroy, :edit, :update]
 
   resources :home, only: :index
+
+  resources :sessions, only: [:new, :create, :destroy]
 
   root 'home#index'
 

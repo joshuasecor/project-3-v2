@@ -91,7 +91,7 @@ transform-origin: top left;
 // LOGIN
 
 #login_modal{
-  width: 750px;
+  width: 250px;
   height: 500px;
   border-radius: 5px;
   margin: 0 auto;
@@ -99,6 +99,10 @@ transform-origin: top left;
   padding-left: 25px;
   padding-right: 25px;
   background-color: white;
+}
+
+#login_modal div{
+	margin: 0 auto;
 }
 
 
