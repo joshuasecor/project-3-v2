@@ -10,7 +10,6 @@ class Message < ActiveRecord::Base
   validates :email, presence: true
   validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i , multiline: true }, length: {minimum: 6}
 
-
   validates :content, presence: true
   validates_length_of :content, maximum: 256
 

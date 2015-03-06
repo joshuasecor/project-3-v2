@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'shoulda/matchers'
 
 RSpec.describe MessagesController, type: :controller do
 
@@ -9,10 +10,9 @@ RSpec.describe MessagesController, type: :controller do
     end
   end
 
-  # describe "GET #create" do
-  #   it "returns http success" do
-  #     get :create
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
+  it do
+    should permit(:name, :email, :content).
+      for(:create)
+  end
+
 end
