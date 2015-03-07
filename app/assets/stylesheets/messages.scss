@@ -6,10 +6,36 @@
 	padding: 1% 0;
 }
 
-#google_map{
+//CONTACT FORM
 
+.left_contact_form{
+	width: 49%;
+	float: left;
+}
+.right_contact_form{
+	width: 49%;
+	float: right;
 }
 
+.contact_field{
+	position: relative;
+	width: 100%;
+	margin: 1% 0;
+}
+
+.contact_message{
+	position: relative;
+	width: 100%;
+	margin: 1% 0;
+	float: right;
+}
+
+.contact_button{
+	float: right;
+}
+
+// ABOUT DETAILS
 #contact_about{
 	float:right;
 }
+

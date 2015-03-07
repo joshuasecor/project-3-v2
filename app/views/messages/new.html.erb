@@ -13,15 +13,12 @@
 	<div id="google_map">
 		<h3> Visit Branch Studio </h3>
 		<%= render "layouts/map" %>
-	</div>
-
-
-	<br>
-	<div id="contact_about">
-		<%= @about.address_line_1 %><br>
-		<%= @about.address_line_2 %><br>
-		<%= @about.city %> <%= @about.state %> <%= @about.zip %> <br>
-		<%= @about.phone %>
+		<div id="contact_about">
+			<%= @about.address_line_1 %>
+			<%= @about.address_line_2 %>
+			<%= @about.city %> <%= @about.state %> <%= @about.zip %>
+			<%= @about.phone %>
+		</div>
 	</div>
 
 </div>
