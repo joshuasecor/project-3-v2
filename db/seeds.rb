@@ -16,12 +16,6 @@ Service.create(name: 'Ashtanga Vinyasa', description: 'Lorem ipsum dolor sit ame
 Service.create(name: 'Candlelight Yoga', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero. Vivamus a magna eget sapien facilisis mattis in id risus. Duis arcu risus, porta in imperdiet eu, venenatis id diam.', is_featured: true)
 
 
-# New appointments
-Appointment.create(service_id: '1', date: '2015-03-20', start_time: '2015-03-20 08:00:00', end_time: '2008-03-20 09:00:00')
-Appointment.create(service_id: '2', date: '2015-03-20', start_time: '2015-03-20 09:00:00', end_time: '2008-03-20 10:00:00')
-Appointment.create(service_id: '3', date: '2015-03-20', start_time: '2015-03-20 10:30:00', end_time: '2008-03-20 12:00:00')
-
-
 # About data
 About.create(about_text: 'Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero. Vivamus a magna eget sapien facilisis mattis in id risus. Duis arcu risus, porta in imperdiet eu, venenatis id diam.', address_line_1: '1410 Second Street', address_line_2: '1st Floor', city: 'Santa Monica', state: 'CA', zip: '90401', email: 'info@branchstudio.com', phone: '310-555-7283')
 
@@ -32,6 +26,10 @@ Trainer.create(first_name: 'Will', last_name: 'Cebron', bio: 'Will pulvinar nunc
 Trainer.create(first_name: 'Monique', last_name: 'Wolf', bio: 'Monique consectetur ante enim, sit amet luctus lacus posuere non. Proin et nisi maximus, dictum purus nec, pellentesque mauris. Aliquam pharetra odio et felis ultrices euismod. Aenean vulputate interdum mollis. Ut sem justo, congue id maximus non, ultricies id lacus.')
 
 
+# New appointments
+Appointment.create(service_id: '1', trainer_id: '1', date: '2015-03-20', start_time: '2015-03-20 08:00:00', end_time: '2008-03-20 09:00:00')
+Appointment.create(service_id: '2', trainer_id: '2', date: '2015-03-20', start_time: '2015-03-20 09:00:00', end_time: '2008-03-20 10:00:00')
+Appointment.create(service_id: '3', trainer_id: '3', date: '2015-03-20', start_time: '2015-03-20 10:30:00', end_time: '2008-03-20 12:00:00')
 
 
 

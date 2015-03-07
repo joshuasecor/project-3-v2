@@ -17,6 +17,8 @@ class Dashboard::AppointmentsController < ApplicationController
     end
   end
 
+  private
+
   def appointment_params
     params.require(:appointment).permit(:date, :start_time, :end_time, :service_id, :trainer_id)
   end

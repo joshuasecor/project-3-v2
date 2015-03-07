@@ -2,7 +2,7 @@
 
 	<div>
 		<a type="button" class="btn button" href="#new_appointment_modal" data-toggle="modal">ADD NEW APPOINTMENT</a>
-	</div>
+	</div><br><br>
 
 	<div class="calendar">
 		<!-- Render all appointments -->
@@ -14,6 +14,8 @@
 			Start Time: <%= a.start_time.strftime("%l:%M%P") %>
 			<br><br>
 			End Time: <%= a.end_time.strftime("%l:%M%P") %>
+			<br><br>
+			Trainer: <%= a.trainer.first_name %> <%= a.trainer.last_name %>
 			<hr>
 		<% end %>
 	</div>

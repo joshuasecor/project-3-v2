@@ -18,6 +18,8 @@
 			Start Time: <%= a.start_time.strftime("%l:%M%P") %>
 			<br><br>
 			End Time: <%= a.end_time.strftime("%l:%M%P") %>
+			<br><br>
+			Trainer: <%= a.trainer.first_name %> <%= a.trainer.last_name %>
 			<hr>
 		<% end %>
 	</div>
