@@ -1,0 +1,7 @@
+
+<%= form_for find_appointment, :url => { :controller => "/dashboard/appointments", :action => "create" } do |f| %>
+	Date: <%= f.date_select :date %><br><br>
+	Start time: <%= f.time_select :start_time %><br><br>
+	End time: <%= f.time_select :start_time %><br><br>
+	<%= f.submit "Save", class: "btn btn-primary button" %>
+<% end %>
