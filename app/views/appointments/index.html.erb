@@ -1,31 +1,41 @@
 <div class="container">
-	<h1><b>FEATURED EVENTS<b></h1>
-	<div class="feature1"><b>Sunday, June 4, 6-9 pm:</b> curabitur non erat faucibus, tincidunt sem a, sollicitudin nunc. Duis fermentum pharetra elementum. Nunc ut luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl vitae elit maximus euismod eu feugiat tortor.</div> 
+	<h3>FEATURED EVENTS</h3>
+	<div class="feature1">
+		<span class="feature_title">Sunday, June 4, 6-9 pm:</span> <span class="font">curabitur non erat faucibus, tincidunt sem a, sollicitudin nunc. Duis fermentum pharetra elementum. Nunc ut luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl vitae elit maximus euismod eu feugiat tortor.</span>
+	</div> 
 	<br>
-	<div class="feature1"><b>Sunday, April 8, 6-9 pm:</b> curabitur non erat faucibus, tincidunt sem a, sollicitudin nunc. Duis fermentum pharetra elementum. Nunc ut luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl vitae elit maximus euismod eu feugiat tortor.</div> 
-	<br><br>
-	<br><br>
-	<br><br>
+	<div class="feature1">
+		<span class="feature_title">Sunday, April 8, 6-9 pm:</span> <span class="font">curabitur non erat faucibus, tincidunt sem a, sollicitudin nunc. Duis fermentum pharetra elementum. Nunc ut luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl vitae elit maximus euismod eu feugiat tortor.</span>
+	</div> 
 	<br><br>
 
 	<div class="calendar">
+		<h3> CALENDAR</h3>
+		<div class="row feature_title">
+				<div class="col-md-4">
+					<h4>Time</h4>
+				</div>
+				<div class="col-md-4">
+					<h4>Class</h4>
+				</div>
+				<div class="col-md-4">
+					<h4>Day</h4>
+				</div>
+			</div>
 		<!-- Render all appointments -->
-		<% @appointments.each do |a| %>
-			Service: <%= a.service.name %>
-			<br><br>
-			Date: <%= a.date.strftime("%A") %>
-			<br><br>
-			Start Time: <%= a.start_time.strftime("%l:%M%P") %>
-			<br><br>
-			End Time: <%= a.end_time.strftime("%l:%M%P") %>
-			<hr>
-		<% end %>
-	</div>
-
-	<br />
-
-	<div class="services_list">
-		Content describing services
+			<div class="row">
+				<% @appointments.each do |a| %>
+				<div class="col-md-4">
+					<%= a.start_time.strftime("%l:%M%P") %> - <%= a.end_time.strftime("%l:%M%P") %>
+				</div>
+				<div class="col-md-4">
+					<%= a.service.name %>
+				</div>
+				<div class="col-md-4">
+					<%= a.date.strftime("%A") %>
+				</div>
+				<% end %>
+			</div>
 	</div>
 
 </div>
