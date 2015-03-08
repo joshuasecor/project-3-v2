@@ -21,8 +21,12 @@
 				<div class="col-md-4">
 					<h4>Day</h4>
 				</div>
+<!-- Add column for trainer: <%= a.trainer.full_name %> -->
 			</div>
-		<!-- Render all appointments -->
+
+
+	<div class="services_list">
+		Content describing services
 			<div class="row">
 				<% @appointments.each do |a| %>
 				<div class="col-md-4">
@@ -34,6 +38,7 @@
 				<div class="col-md-4">
 					<%= a.date.strftime("%A") %>
 				</div>
+<!-- Add column for trainer: <%= a.trainer.full_name %> -->
 				<% end %>
 			</div>
 	</div>

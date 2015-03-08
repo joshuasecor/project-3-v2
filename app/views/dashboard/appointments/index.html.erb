@@ -1,1 +1,34 @@
-Dashboard appointments index
+<div class='container'>
+
+	<div>
+		<a type="button" class="btn button" href="#new_appointment_modal" data-toggle="modal">ADD NEW APPOINTMENT</a>
+	</div><br><br>
+
+	<div class="calendar">
+		<!-- Render all appointments -->
+		<% @appointments.each do |a| %>
+			Service: <%= a.service.name %>
+			<br><br>
+			Date: <%= a.date.strftime("%A") %>
+			<br><br>
+			Start Time: <%= a.start_time.strftime("%l:%M%P") %>
+			<br><br>
+			End Time: <%= a.end_time.strftime("%l:%M%P") %>
+			<br><br>
+			Trainer: <%= a.trainer.first_name %> <%= a.trainer.last_name %>
+			<hr>
+		<% end %>
+	</div>
+
+</div>
+
+
+<div class="modal fade" id="new_appointment_modal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">&times;</a>
+    <h3>New Appointment</h3>
+  </div>
+  <div><br>
+	  <%= render "layouts/appointment_form" %>
+  </div>
+</div>
