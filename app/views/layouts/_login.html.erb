@@ -2,5 +2,5 @@
 <%= form_for find_user, :url => { :controller => "/sessions", :action => "create" } do |f| %>
 	<%= f.text_field :email, placeholder: "email", autofocus: true %><br><br>
 	<%= f.password_field :password, placeholder: "password" %><br><br>
-	<%= f.submit "Login", class: "btn btn-primary" %>
+	<%= f.submit "Login", class: "btn btn-primary button" %>
 <% end %>

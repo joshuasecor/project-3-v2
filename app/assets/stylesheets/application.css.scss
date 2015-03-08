@@ -16,9 +16,10 @@
 @import 'bootstrap';
 $background-color: #f6f6f6;
 
+
 .container{
   background-color: #f6f6f6;
-}
+} 
 
 // HEADER
 .header{
@@ -106,4 +107,16 @@ transform-origin: top left;
   width: 100% !important;
   height: 100% !important; 
   max-height: 400px;
+}
+
+// BUTTONS
+
+.button{
+  background-color: #00b9ce;
+  color: white;
+}
+
+// FONT FOR ALL TYPES
+.font{
+  color: #8d8a8a;
 }
