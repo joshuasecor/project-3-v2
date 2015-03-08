@@ -3,7 +3,7 @@
 	Date: <%= f.date_select :date %><br><br>
 	Start time: <%= f.time_select :start_time %><br><br>
 	End time: <%= f.time_select :end_time %><br><br>
-	<%= f.collection_select( :service_id, Service.all, :id, :name, prompt: true ) %><br><br>
-	<%= f.collection_select( :trainer_id, Trainer.all, :id, :first_name, prompt: true ) %><br><br>
+	Service: <%= f.collection_select( :service_id, Service.all, :id, :name, prompt: true ) %><br><br>
+	Trainer: <%= f.collection_select( :trainer_id, Trainer.all, :id, :full_name, prompt: true ) %><br><br>
 	<%= f.submit "Save", class: "btn btn-primary button" %>
 <% end %>
