@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20150309033206) do
 
   # These are extensions that must be enabled in order to support this database
@@ -93,10 +94,14 @@ ActiveRecord::Schema.define(version: 20150309033206) do
     t.string   "name"
     t.text     "description"
     t.boolean  "is_featured"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.integer  "level_id"
     t.integer  "category_id"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "services", ["category_id"], name: "index_services_on_category_id", using: :btree
@@ -107,8 +112,12 @@ ActiveRecord::Schema.define(version: 20150309033206) do
     t.string   "last_name"
     t.text     "bio"
     t.boolean  "is_featured"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
@@ -118,8 +127,12 @@ ActiveRecord::Schema.define(version: 20150309033206) do
     t.string   "first_name"
     t.string   "last_name"
     t.boolean  "is_admin"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_foreign_key "appointments", "services"
