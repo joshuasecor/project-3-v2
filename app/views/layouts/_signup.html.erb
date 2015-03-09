@@ -3,5 +3,6 @@
 	<%= f.text_field :email, placeholder: "email" %><br><br>
 	<%= f.password_field :password, placeholder: "password" %><br><br>
 	<%= f.password_field :password_confirmation, placeholder: "confirm password" %><br><br>
+	upload photo <%= f.file_field :photo %>
 	<%= f.submit "Signup", class: "btn btn-primary button" %>
 <% end %>
