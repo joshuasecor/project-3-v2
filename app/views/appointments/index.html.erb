@@ -19,14 +19,12 @@
 					<h4>Class</h4>
 				</div>
 				<div class="col-md-4">
-					<h4>Day</h4>
+					<h4>Trainer</h4>
 				</div>
-<!-- Add column for trainer, use "full_name" -->
 			</div>
 
 
 	<div class="services_list">
-		Content describing services
 			<div class="row">
 				<% @appointments.each do |a| %>
 				<div class="col-md-4">
@@ -36,9 +34,9 @@
 					<%= a.service.name %>
 				</div>
 				<div class="col-md-4">
-					<%= a.date.strftime("%A") %>
+					<%#= a.date.strftime("%A") %>
+					<%= a.trainer.full_name %>
 				</div>
-<!-- Add column for trainer: <%= a.trainer.full_name %> -->
 				<% end %>
 			</div>
 	</div>
