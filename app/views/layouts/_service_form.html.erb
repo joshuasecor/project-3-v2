@@ -1,0 +1,9 @@
+
+<%= form_for find_service, :url => { :controller => "/dashboard/services", :action => "create" } do |f| %>
+	Name: <%= f.text_field :name %><br><br>
+	Description: <%= f.text_area :description %><br><br>
+	Featured? <%= f.check_box :is_featured %><br><br>
+	Level: <%= f.collection_select( :level_id, Level.all, :id, :name, prompt: true ) %><br><br>
+	Category: <%= f.collection_select( :category_id, Category.all, :id, :name, prompt: true ) %><br><br>
+	<%= f.submit "Save", class: "btn btn-primary button" %>
+<% end %>

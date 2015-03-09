@@ -8,4 +8,8 @@ module ApplicationHelper
 		@appointment = Appointment.new
 	end
 
+	def find_service
+		@service = Service.new
+	end
+
 end

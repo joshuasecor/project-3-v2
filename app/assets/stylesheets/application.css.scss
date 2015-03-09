@@ -26,7 +26,17 @@ $background-color: #f6f6f6;
 	margin-top: 20px;
 }
 
+.left_header{
+  text-align: left;
+  float: left;
+  width: 50%;
+}
 
+.right_header{
+  text-align: right;
+  float: right;
+  width: 50%;
+}
 
 // FOOTER
 
@@ -72,7 +82,7 @@ transform-origin: top left;
 }
 
 
-// LOGIN
+// CREATE APPOINTMENT
 
 #new_appointment_modal{
   width: 40%;
@@ -86,6 +96,24 @@ transform-origin: top left;
 }
 
 #new_appointment_modal div{
+  margin: 0 auto;
+}
+
+
+// CREATE SERVICE
+
+#new_service_modal{
+  width: 40%;
+  height: 80%;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: white;
+}
+
+#new_service_modal div{
   margin: 0 auto;
 }
 

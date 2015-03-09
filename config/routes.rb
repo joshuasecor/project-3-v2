@@ -21,8 +21,8 @@ Rails.application.routes.draw do
 
   namespace :dashboard do
     resources :appointments, only: [:index, :new, :create]
-    resources :services, only: :index
-    resources :trainers, only: :index
+    resources :services, only: [:index, :new, :create]
+    resources :trainers, only: [:index, :new, :create]
   end
 
   root 'home#index'
