@@ -3,15 +3,15 @@
 	<h1>Admin Dashboard</h1><br>
 
 	<div>
-		<%= link_to 'Manage Appointments', dashboard_appointments_path %>
+		<%= button_to 'Manage Appointments', dashboard_appointments_path, class: "btn button", method: :get %>
 	</div><hr>
 
 	<div>
-		<%= link_to 'Manage Services', dashboard_services_path %>
+		<%= button_to 'Manage Services', dashboard_services_path, class: "btn button", method: :get %>
 	</div><hr>
 
 	<div>
-		<%= link_to 'Manage Trainers', dashboard_trainers_path %>
+		<%= button_to 'Manage Trainers', dashboard_trainers_path, class: "btn button", method: :get %>
 	</div><hr>
 
 </div>

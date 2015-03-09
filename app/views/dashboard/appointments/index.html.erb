@@ -1,12 +1,12 @@
 <div class='container'>
-
+	<%= link_to "< Back to Dashboard", '/dashboard', "data-no-turbolink" => true %><br><br>
 	<div>
-		<a type="button" class="btn button" href="#new_appointment_modal" data-toggle="modal">ADD NEW APPOINTMENT</a>
+		<a type="button" class="btn button" href="#new_appointment_modal" data-toggle="modal">Add New Appointment</a>
 	</div><br><br>
 
 	<div class="calendar">
 		<!-- Render all appointments -->
-		<% @appointments.each do |a| %>
+		<% @appointments.reverse_each do |a| %>
 			Service: <%= a.service.name %>
 			<br><br>
 			Date: <%= a.date.strftime("%A") %>
