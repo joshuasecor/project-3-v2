@@ -12,13 +12,16 @@
 	<div class="calendar">
 		<h3> CALENDAR</h3>
 		<div class="row feature_title">
-				<div class="col-md-4">
+				<div class="col-md-3">
+					<h4>Day of Week</h4>
+				</div>
+				<div class="col-md-3">
 					<h4>Time</h4>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<h4>Class</h4>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<h4>Trainer</h4>
 				</div>
 			</div>
@@ -27,14 +30,16 @@
 	<div class="services_list">
 			<div class="row">
 				<% @appointments.each do |a| %>
-				<div class="col-md-4">
+				<div class="col-md-3">
+					<%= a.date.strftime("%A") %>
+				</div>
+				<div class="col-md-3">
 					<%= a.start_time.strftime("%l:%M%P") %> - <%= a.end_time.strftime("%l:%M%P") %>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<%= a.service.name %>
 				</div>
-				<div class="col-md-4">
-					<%#= a.date.strftime("%A") %>
+				<div class="col-md-3">
 					<%= a.trainer.full_name %>
 				</div>
 				<% end %>
