@@ -1,3 +1,31 @@
 <div class='container'>
 	<%= link_to "< Back to Dashboard", '/dashboard', "data-no-turbolink" => true %><br><br>
+	<div>
+		<a type="button" class="btn button" href="#new_trainer_modal" data-toggle="modal">Add New Trainer</a> 
+	</div><br><br>
+
+	<div class="trainers_list">
+		<!-- Render all trainers -->
+		<% @trainers.reverse_each do |t| %>
+			Name: <%= t.full_name %>
+			<br><br>
+			Bio: <%= t.bio %>
+			<br><br>
+			Featured?: <%= t.is_featured %>
+			<br><br>
+			<hr>
+		<% end %>
+	</div>
+
+</div>
+
+
+<div class="modal fade" id="new_trainer_modal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">&times;</a>
+    <h3>New Trainer</h3>
+  </div>
+  <div><br>
+	  <%= render "layouts/trainer_form" %>
+  </div>
 </div>

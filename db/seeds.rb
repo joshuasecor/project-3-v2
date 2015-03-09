@@ -46,16 +46,16 @@ About.create(about_text: 'Curabitur efficitur auctor tortor. Proin ex nunc, posu
 
 
 # New trainers
-Trainer.create(first_name: 'Josh', last_name: 'Secor', bio: 'Josh ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat commodo arcu at dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.')
-Trainer.create(first_name: 'Will', last_name: 'Cebron', bio: 'Will pulvinar nunc ligula, facilisis consequat odio pharetra nec. Suspendisse potenti. Etiam fringilla, quam quis euismod tempor, nulla lectus tincidunt ex, et facilisis erat lectus nec sapien. Nulla facilisi.')
-Trainer.create(first_name: 'Monique', last_name: 'Wolf', bio: 'Monique consectetur ante enim, sit amet luctus lacus posuere non. Proin et nisi maximus, dictum purus nec, pellentesque mauris. Aliquam pharetra odio et felis ultrices euismod. Aenean vulputate interdum mollis. Ut sem justo, congue id maximus non, ultricies id lacus.')
+Trainer.create(first_name: 'Josh', last_name: 'Secor', bio: 'Josh ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat commodo arcu at dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.', is_featured: true)
+Trainer.create(first_name: 'Will', last_name: 'Cebron', bio: 'Will pulvinar nunc ligula, facilisis consequat odio pharetra nec. Suspendisse potenti. Etiam fringilla, quam quis euismod tempor, nulla lectus tincidunt ex, et facilisis erat lectus nec sapien. Nulla facilisi.', is_featured: true)
+Trainer.create(first_name: 'Monique', last_name: 'Wolf', bio: 'Monique consectetur ante enim, sit amet luctus lacus posuere non. Proin et nisi maximus, dictum purus nec, pellentesque mauris. Aliquam pharetra odio et felis ultrices euismod. Aenean vulputate interdum mollis. Ut sem justo, congue id maximus non, ultricies id lacus.', is_featured: true)
 
 
 # New appointments
-Appointment.create(service_id: 1, trainer_id: '1', date: '2015-03-18', start_time: '2015-03-20 08:00:00', end_time: '2008-03-20 09:00:00')
-Appointment.create(service_id: 2, trainer_id: '2', date: '2015-03-19', start_time: '2015-03-20 09:00:00', end_time: '2008-03-20 10:00:00')
-Appointment.create(service_id: 3, trainer_id: '3', date: '2015-03-20', start_time: '2015-03-20 10:30:00', end_time: '2008-03-20 12:00:00')
-Appointment.create(service_id: 1, trainer_id: '3', date: '2015-03-20', start_time: '2015-03-20 10:30:00', end_time: '2008-03-20 12:00:00')
+Appointment.create(service_id: 1, trainer_id: 1, date: '2015-03-18', start_time: '2015-03-20 08:00:00', end_time: '2008-03-20 09:00:00')
+Appointment.create(service_id: 2, trainer_id: 2, date: '2015-03-19', start_time: '2015-03-20 09:00:00', end_time: '2008-03-20 10:00:00')
+Appointment.create(service_id: 3, trainer_id: 3, date: '2015-03-20', start_time: '2015-03-20 10:30:00', end_time: '2008-03-20 12:00:00')
+Appointment.create(service_id: 1, trainer_id: 3, date: '2015-03-20', start_time: '2015-03-20 10:30:00', end_time: '2008-03-20 12:00:00')
 
 # Admin user
 User.create(email: 'admin@branchstudio.com', password: 'password', is_admin: true)

@@ -12,4 +12,8 @@ module ApplicationHelper
 		@service = Service.new
 	end
 
+	def find_trainer
+		@trainer = Trainer.new
+	end
+
 end
