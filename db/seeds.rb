@@ -7,13 +7,38 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+# New levels
+Level.create(name: 'Beginner')
+
+Level.create(name: 'Intermediate')
+
+Level.create(name: 'Advanced')
+
+
+# New Categories
+Category.create(name: 'Anusara')
+
+Category.create(name: 'Ashtanga')
+
+Category.create(name: 'Bikram')
+
+Category.create(name: 'Hatha')
+
+Category.create(name: 'Iyengar')
+
+Category.create(name: 'Restorative')
+
+Category.create(name: 'Vinyasa')
+
+Category.create(name: 'Other')
+
 
 # New services
-Service.create(name: 'Power Yoga', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero. Vivamus a magna eget sapien facilisis mattis in id risus. Duis arcu risus, porta in imperdiet eu, venenatis id diam.', is_featured: true)
+Service.create(name: 'Power Yoga', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero. Vivamus a magna eget sapien facilisis mattis in id risus. Duis arcu risus, porta in imperdiet eu, venenatis id diam.', is_featured: true, level_id: 3, category_id: 3)
 
-Service.create(name: 'Ashtanga Vinyasa', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero. Vivamus a magna eget sapien facilisis mattis in id risus. Duis arcu risus, porta in imperdiet eu, venenatis id diam.', is_featured: true)
+Service.create(name: 'Ashtanga Vinyasa', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero. Vivamus a magna eget sapien facilisis mattis in id risus. Duis arcu risus, porta in imperdiet eu, venenatis id diam.', is_featured: true, level_id: 2, category_id: 7)
 
-Service.create(name: 'Candlelight Yoga', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero. Vivamus a magna eget sapien facilisis mattis in id risus. Duis arcu risus, porta in imperdiet eu, venenatis id diam.', is_featured: true)
+Service.create(name: 'Candlelight Yoga', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero. Vivamus a magna eget sapien facilisis mattis in id risus. Duis arcu risus, porta in imperdiet eu, venenatis id diam.', is_featured: true, level_id: 1, category_id: 6)
 
 
 # About data
