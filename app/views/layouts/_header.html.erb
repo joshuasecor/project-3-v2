@@ -9,18 +9,20 @@
 					<%= link_to 'SERVICES', appointments_path, "data-no-turbolink" => true  %> &nbsp; 
 					<%= link_to 'TRAINERS', trainers_path, "data-no-turbolink" => true %> &nbsp;
 					<%= link_to 'CONTACT', contact_path, "data-no-turbolink" => true %> &nbsp;
-					<% if current_user != nil %>
-						Logged in as: <%= current_user.email %>
-					<% end %>
-					<% if current_user != nil %>
-						<%= link_to "Logout", session_path(:current_session), method: :delete %>
-					<% else %>
-						<a type="button" class="btn" href="#login_modal" data-toggle="modal">LOGIN</a>
+					<% if current_user != nil && current_user.is_admin? %>
+						<%= link_to "DASHBOARD", '/dashboard', "data-no-turbolink" => true, style: 'color:#f000ec;' %> &nbsp;
 					<% end %>
 				</div>
 		</div>
-		<div class="header_hamburger">
-			
+		<div class="right_header">
+			<% if current_user != nil %>
+				Logged in as: <%= current_user.email %>
+			<% end %>
+			<% if current_user != nil %>
+				<%= link_to "Logout", session_path(:current_session), method: :delete %>
+			<% else %>
+				<a type="button" class="btn" href="#login_modal" data-toggle="modal">LOGIN/SIGNUP</a>
+			<% end %>
 		</div>
 		
 	</div>
@@ -39,5 +41,4 @@
 	  <h3>Signup</h3>
 	  <%= render "layouts/signup" %>
   </div>
-
 </div>

@@ -20,9 +20,9 @@ Rails.application.routes.draw do
   resources :dashboard, only: :index
 
   namespace :dashboard do
-    resources :appointments, only: :index
-    resources :services, only: :index
-    resources :trainers, only: :index
+    resources :appointments, only: [:index, :new, :create]
+    resources :services, only: [:index, :new, :create]
+    resources :trainers, only: [:index, :new, :create]
   end
 
   root 'home#index'

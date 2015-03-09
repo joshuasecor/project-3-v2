@@ -1,1 +1,35 @@
-index.html.erb
+<div class='container'>
+	<%= link_to "< Back to Dashboard", '/dashboard', "data-no-turbolink" => true %><br><br>
+	<div>
+		<a type="button" class="btn button" href="#new_service_modal" data-toggle="modal">Add New Service</a> 
+	</div><br><br>
+
+	<div class="services_list">
+		<!-- Render all services -->
+		<% @services.reverse_each do |s| %>
+			Name: <%= s.name %>
+			<br><br>
+			Description: <%= s.description %>
+			<br><br>
+			Featured?: <%= s.is_featured %>
+			<br><br>
+			Level: <%= s.level.name %>
+			<br><br>
+			Category: <%= s.category.name %>
+			<br><br>
+			<hr>
+		<% end %>
+	</div>
+
+</div>
+
+
+<div class="modal fade" id="new_service_modal">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">&times;</a>
+    <h3>New Service</h3>
+  </div>
+  <div><br>
+	  <%= render "layouts/service_form" %>
+  </div>
+</div>

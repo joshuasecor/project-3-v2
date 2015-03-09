@@ -30,7 +30,17 @@ $background-color: #f6f6f6;
   color: #414042;
 }
 
+.left_header{
+  text-align: left;
+  float: left;
+  width: 50%;
+}
 
+.right_header{
+  text-align: right;
+  float: right;
+  width: 50%;
+}
 
 // FOOTER
 
@@ -75,6 +85,62 @@ transform-origin: top left;
 	margin: 0 auto;
 }
 
+
+// CREATE APPOINTMENT
+
+#new_appointment_modal{
+  width: 40%;
+  height: 80%;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: white;
+}
+
+#new_appointment_modal div{
+  margin: 0 auto;
+}
+
+
+// CREATE SERVICE
+
+#new_service_modal{
+  width: 40%;
+  height: 80%;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: white;
+}
+
+#new_service_modal div{
+  margin: 0 auto;
+}
+
+
+// CREATE TRAINER
+
+#new_trainer_modal{
+  width: 40%;
+  height: 80%;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: white;
+}
+
+#new_trainer_modal div{
+  margin: 0 auto;
+}
+
+
+
 // MAP
 
 #map-container {
@@ -99,4 +165,9 @@ transform-origin: top left;
 .button{
   background-color: #00b9ce;
   color: white;
+}
+
+// FONT FOR ALL TYPES
+.font{
+  color: #8d8a8a;
 }
