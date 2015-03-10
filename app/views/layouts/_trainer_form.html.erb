@@ -4,5 +4,6 @@
 	Last Name: <%= f.text_field :last_name %><br><br>
 	Bio: <%= f.text_area :bio %><br><br>
 	Featured? <%= f.check_box :is_featured %><br><br>
+	upload photo <%= f.file_field :photo %>
 	<%= f.submit "Save", class: "btn btn-primary button" %>
 <% end %>

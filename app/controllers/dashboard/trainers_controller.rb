@@ -18,7 +18,7 @@ class Dashboard::TrainersController < ApplicationController
   private
 
   def trainer_params
-    params.require(:trainer).permit(:first_name, :last_name, :is_featured, :bio,)
+    params.require(:trainer).permit(:first_name, :last_name, :is_featured, :bio, :photo)
   end
 
 end
