@@ -16,12 +16,12 @@ RSpec.feature "Messages", type: :feature do
     it "expects contact info to be valid" do 
     visit '/contact'
     within(".contact_form") do
-      fill_in "Name", with: "John Doe"
-      fill_in "Email", with: "john@johndoe.com"
-      fill_in "Message", with: "Hi"
+      fill_in "first and last name", with: "John Doe"
+      fill_in "email", with: "john@johndoe.com"
+      fill_in "your message", with: "Hi"
     end
     click_button('Send')
-    expect(page).to have_content "HomePage"
+    expect(page).to have_content "VISIT BRANCH STUDIO"
   end
 
 end

@@ -1,4 +1,4 @@
 class Weekday < ActiveRecord::Base
-	has_many :appoinments
+	has_many :appointments
 
 end
