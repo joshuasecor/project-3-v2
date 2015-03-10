@@ -20,7 +20,7 @@ class Dashboard::AppointmentsController < ApplicationController
   private
 
   def appointment_params
-    params.require(:appointment).permit(:date, :start_time, :end_time, :service_id, :trainer_id)
+    params.require(:appointment).permit(:date, :start_time, :end_time, :service_id, :trainer_id, :weekday_id)
   end
 
 end

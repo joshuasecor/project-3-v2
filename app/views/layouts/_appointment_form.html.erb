@@ -1,6 +1,6 @@
 
 <%= form_for find_appointment, :url => { :controller => "/dashboard/appointments", :action => "create" } do |f| %>
-	Date: <%= f.date_select :date %><br><br>
+	Day: <%= f.collection_select(:weekday_id, Weekday.all, :id, :name, prompt: true) %><br><br>
 	Start time: <%= f.time_select :start_time %><br><br>
 	End time: <%= f.time_select :end_time %><br><br>
 	Service: <%= f.collection_select( :service_id, Service.all, :id, :name, prompt: true ) %><br><br>
