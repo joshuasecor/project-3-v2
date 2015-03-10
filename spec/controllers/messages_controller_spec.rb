@@ -10,7 +10,7 @@ RSpec.describe MessagesController, type: :controller do
     end
   end
 
-  it do
+  it "allows parameters for create" do
     should permit(:name, :email, :content).
       for(:create)
   end
