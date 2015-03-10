@@ -5,21 +5,40 @@
 	</div><br><br>
 
 	<div class="calendar">
+		<div class="row feature_title">
+				<div class="col-md-3">
+					<h4>Class</h4>
+				</div>
+				<div class="col-md-3">
+					<h4>Day of Week</h4>
+				</div>
+				<div class="col-md-3">
+					<h4>Time</h4>
+				</div>
+				<div class="col-md-3">
+					<h4>Trainer</h4>
+				</div>
+		</div>
 		<!-- Render all appointments -->
-		<% @appointments.reverse_each do |a| %>
-			Service: <%= a.service.name %>
-			<br><br>
-			Date: <%= a.date.strftime("%A") %>
-			<br><br>
-			Start Time: <%= a.start_time.strftime("%l:%M%P") %>
-			<br><br>
-			End Time: <%= a.end_time.strftime("%l:%M%P") %>
-			<br><br>
-			Trainer: <%= a.trainer.full_name %>
-			<hr>
-		<% end %>
+		<div class="services_list">
+			<div class="row">
+				<% @appointments.order("weekday_id", "start_time").each do |a| %>
+				<div class="col-md-3">
+					<%= a.service.name %>
+				</div>
+				<div class="col-md-3">
+					<%= a.weekday.name %>
+				</div>
+				<div class="col-md-3">
+					<%= a.start_time.strftime("%l:%M%P") %> - <%= a.end_time.strftime("%l:%M%P") %>
+				</div>
+				<div class="col-md-3">
+					<%= a.trainer.full_name %>
+				</div>
+				<% end %>
+			</div>
+		</div>
 	</div>
-
 </div>
 
 

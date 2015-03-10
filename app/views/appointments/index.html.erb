@@ -29,9 +29,9 @@
 
 	<div class="services_list">
 			<div class="row">
-				<% @appointments.each do |a| %>
+				<% @appointments.order("weekday_id", "start_time").each do |a| %>
 				<div class="col-md-3">
-					<%= a.date.strftime("%A") %>
+					<%= a.weekday.name %>
 				</div>
 				<div class="col-md-3">
 					<%= a.start_time.strftime("%l:%M%P") %> - <%= a.end_time.strftime("%l:%M%P") %>
