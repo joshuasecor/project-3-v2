@@ -18,7 +18,7 @@ class Dashboard::ServicesController < ApplicationController
   private
 
   def service_params
-    params.require(:service).permit(:name, :description, :is_featured, :level_id, :category_id)
+    params.require(:service).permit(:name, :description, :is_featured, :level_id, :category_id, :photo)
   end
 
 end
