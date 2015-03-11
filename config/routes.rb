@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :services
 
-  resources :users, only: [:new, :create, :show, :destroy, :edit, :update]
+  resources :users, except: :index
 
   resources :home, only: :index
 

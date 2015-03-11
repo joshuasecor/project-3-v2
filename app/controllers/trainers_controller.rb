@@ -6,6 +6,7 @@ class TrainersController < ApplicationController
 
 	def show
   	@trainer = Trainer.find(params[:id])
+    render json: @trainer
   end
 
   def update
