@@ -16,42 +16,49 @@
 @import 'bootstrap';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
-$background-color: #f6f6f6;
+$background: #f6f6f6;
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $background;
+}
 
-.container{
-  $background-color: #f6f6f6;
-} 
+body a{
+  color:#414042; 
+  text-decoration:none;
+}
+
+body a:hover{
+  color:#00b9ce; 
+  text-decoration:none;
+}
 
 // HEADER
 .header{
 	margin-top: 20px;
 }
 
-a{
-  color:#414042; 
-  text-decoration:none;
-}
-a:hover{
-  color:#00b9ce;
-}
+// .header a{
+//   color:#414042; 
+//   text-decoration:none;
+// }
 
-.nav_links{
-  color: #414042;
-}
+// .header a:hover{
+//   color:#00b9ce; 
+//   text-decoration:none;
+// }
+
 
 .left_header{
   text-align: left;
   float: left;
   width: 50%;
-  color: #414042;
 }
 
 .right_header{
   text-align: right;
   float: right;
   width: 50%;
-  color: #414042;
 }
 
 // FOOTER
