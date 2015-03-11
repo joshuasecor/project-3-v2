@@ -1,40 +1,11 @@
 
+<div class="hero">
+    <img src="assets/CarouselTop_02.png">
+</div>
+
 <div class="container">
 	<h1></h1>
 
-	<div class="hero">
-      <img src="assets/CarouselTop_02.png">
-  </div>
-
-<!-- ___________________________________________________________________________________________ -->
-
-  <div class="carousel">
-    <!--  Hero image that cycles through multiple photos -->
-    </div>
-    <br><br>
-    <hr>
-    <div class="featured_services">
-      <% @services.where(is_featured: 'true').each do |s| %>
-      <div>
-        <%= link_to s.name, s %> <br><br>
-        <%= s.description %>
-      </div>
-      <br>
-      <% end %>
-    </div>
-    <br>
-    <hr>
-    <div class="about_text">
-      ABOUT US: <br><br>
-      <%= @about.about_text %>
-    </div>
-    <br><br>
-    <hr>
-    MEET THE INSTRUCTORS AT BRANCH STUDIO: <br><br>
-	
-	<div class="carousel">
-	<!-- 	Hero image that cycles through multiple photos -->
-	</div>
 	<br><br>
 	<hr>
 	<div class="featured_services">
