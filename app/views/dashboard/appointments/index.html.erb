@@ -1,39 +1,44 @@
 <div class='container'>
-	<%= link_to "< Back to Dashboard", '/dashboard', "data-no-turbolink" => true %><br><br>
-	<div>
-		<a type="button" class="btn button" href="#new_appointment_modal" data-toggle="modal">Add New Appointment</a>
-	</div><br><br>
+	<a type="button" class="btn button" href="/dashboard" >&#8592; Back</a><br><br>
+	<a type="button" class="btn button" href="#new_appointment_modal" data-toggle="modal">+ Add New Appointment</a>
+	<br><br>
 
 	<div class="calendar">
 		<div class="row feature_title">
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<h4>Class</h4>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<h4>Day of Week</h4>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<h4>Time</h4>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<h4>Trainer</h4>
 				</div>
+				<div class="col-md-4">
+					<h4></h4>
+				</div>
 		</div>
-		<!-- Render all appointments -->
+
 		<div class="services_list">
 			<div class="row">
 				<% @appointments.order("weekday_id", "start_time").each do |a| %>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<%= a.service.name %>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<%= a.weekday.name %>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<%= a.start_time.strftime("%l:%M%P") %> - <%= a.end_time.strftime("%l:%M%P") %>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-2">
 					<%= a.trainer.full_name %>
+				</div>
+				<div class="col-md-4">
+					<%= link_to 'Edit', edit_dashboard_appointment_path(a) %>
 				</div>
 				<% end %>
 			</div>

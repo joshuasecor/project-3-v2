@@ -5,13 +5,13 @@ Rails.application.routes.draw do
 
   resources :abouts, only: :index
 
-  resources :appointments, only: :index
+  resources :appointments
 
-  resources :trainers, only: [:index, :show]
+  resources :trainers
 
-  resources :services, only: [:index, :show]
+  resources :services
 
-  resources :users, only: [:new, :create, :show, :destroy, :edit, :update]
+  resources :users, except: :index
 
   resources :home, only: :index
 
@@ -20,9 +20,9 @@ Rails.application.routes.draw do
   resources :dashboard, only: :index
 
   namespace :dashboard do
-    resources :appointments, only: [:index, :new, :create]
-    resources :services, only: [:index, :new, :create]
-    resources :trainers, only: [:index, :new, :create]
+    resources :appointments
+    resources :services
+    resources :trainers
   end
 
   root 'home#index'

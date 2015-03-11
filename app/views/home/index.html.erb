@@ -31,7 +31,59 @@
     <br><br>
     <hr>
     MEET THE INSTRUCTORS AT BRANCH STUDIO: <br><br>
+	
+	<div class="carousel">
+	<!-- 	Hero image that cycles through multiple photos -->
+	</div>
+	<br><br>
+	<hr>
+	<div class="featured_services">
+		<% @services.where(is_featured: 'true').each do |s| %>
+		<div>
+			<%= link_to s.name, s %> <br><br>
+			<%= s.description %>
+		</div>
+		<br>
+		<% end %>
+	</div>
+	<br>
+	<hr>
+	<div class="about_text">
+		ABOUT US: <br><br>
+		<%= @about.about_text %>
+	</div>
+	<br><br>
+	<hr>
+	MEET THE INSTRUCTORS AT BRANCH STUDIO: <br><br>
+	<div id="teacher_carousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+  <% @trainers.each_with_index do |t, index| %>
+    <li data-target="#teacher_carousel" data-slide-to="<%= index + 1 %>" class="<%= index == 0 ? 'active' : ''%>"></li>
+  <% end %>
+  </ol>
+ 
+  
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox"> 
+    <% @trainers.each_with_index do |t, index| %>
+    <div class="<%= index == 0 ? 'item active' : 'item' %>">
 
+      <div class="row">
+        <div class="col-sm-4"><a href="#x"><img src="<%= t.photo.url %>" alt="Image" class="img-responsive"></a>
+          <div class="carousel-caption"><%= link_to (t.first_name + ' ' + t.last_name), t %></div>
+        </div>
+    </div>
+  </div>
+  <% end %>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#teacher_carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#teacher_carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> <!-- Carousel -->
     <!-- __________________________________________________________________________________ -->
     <div id="teacher_carousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -46,7 +98,6 @@
     <div class="carousel-inner" role="listbox"> 
       <% @trainers.each_with_index do |t, index| %>
       <div class="<%= index == 0 ? 'item active' : 'item' %>">
-
         <div class="row">
           <div class="col-sm-4"><a href="#x"><img src="<%= t.photo.url %>" alt="Image" class="img-responsive"></a>
             <div class="carousel-caption"><%= link_to (t.first_name + ' ' + t.last_name), t %></div>
@@ -62,7 +113,6 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
   </div> <!-- Carousel -->
-
 
 
 </div>

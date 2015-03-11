@@ -1,24 +1,42 @@
 <div class='container'>
-	<%= link_to "< Back to Dashboard", '/dashboard', "data-no-turbolink" => true %><br><br>
-	<div>
-		<a type="button" class="btn button" href="#new_service_modal" data-toggle="modal">Add New Service</a> 
-	</div><br><br>
+	<a type="button" class="btn button" href="/dashboard" >&#8592; Back</a><br><br>
+	<a type="button" class="btn button" href="#new_service_modal" data-toggle="modal">+ Add New Service</a> 
+	<br><br>
 
 	<div class="services_list">
-		<!-- Render all services -->
-		<% @services.reverse_each do |s| %>
-			Name: <%= s.name %>
-			<br><br>
-			Description: <%= s.description %>
-			<br><br>
-			Featured?: <%= s.is_featured %>
-			<br><br>
-			Level: <%= s.level.name %>
-			<br><br>
-			Category: <%= s.category.name %>
-			<br><br>
-			<hr>
-		<% end %>
+		<div class="row feature_title">
+				<div class="col-md-3">
+					<h4>Class</h4>
+				</div>
+				<div class="col-md-3">
+					<h4>Level</h4>
+				</div>
+				<div class="col-md-3">
+					<h4>Category</h4>
+				</div>
+				<div class="col-md-3">
+					<h4></h4>
+				</div>
+		</div>
+
+		<div class="services_list">
+			<div class="row">
+				<% @services.order("name").each do |s| %>
+				<div class="col-md-3">
+					<%= s.name %>
+				</div>
+				<div class="col-md-3">
+					<%= s.level.name %>
+				</div>
+				<div class="col-md-3">
+					<%= s.category.name %>
+				</div>
+				<div class="col-md-3">
+					<%= link_to 'Edit', edit_dashboard_service_path(s) %>
+				</div>
+				<% end %>
+			</div>
+		</div>
 	</div>
 
 </div>
