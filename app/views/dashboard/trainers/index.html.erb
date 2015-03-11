@@ -1,20 +1,36 @@
 <div class='container'>
-	<%= link_to "< Back to Dashboard", '/dashboard', "data-no-turbolink" => true %><br><br>
-	<div>
-		<a type="button" class="btn button" href="#new_trainer_modal" data-toggle="modal">Add New Trainer</a> 
-	</div><br><br>
+	<a type="button" class="btn button" href="/dashboard" >&#8592; Back</a><br><br>
+	<a type="button" class="btn button" href="#new_trainer_modal" data-toggle="modal">+ Add New Trainer</a> 
+	<br><br>
 
 	<div class="trainers_list">
-		<!-- Render all trainers -->
-		<% @trainers.reverse_each do |t| %>
-			Name: <%= t.full_name %>
-			<br><br>
-			Bio: <%= t.bio %>
-			<br><br>
-			Featured?: <%= t.is_featured %>
-			<br><br>
-			<hr>
-		<% end %>
+		<div class="row feature_title">
+				<div class="col-md-4">
+					<h4>Trainer</h4>
+				</div>
+				<div class="col-md-4">
+					<h4>Photo</h4>
+				</div>
+				<div class="col-md-4">
+					<h4></h4>
+				</div>
+		</div>
+
+		<div class="trainers_list">
+			<div class="row">
+				<% @trainers.order("last_name").each do |t| %>
+				<div class="col-md-4">
+					<%= t.full_name %>
+				</div>
+				<div class="col-md-4">
+					<%=image_tag t.photo.url(:thumb)%>
+				</div>
+				<div class="col-md-4">
+					<%= link_to 'Edit', edit_dashboard_trainer_path(t) %>
+				</div>
+				<% end %>
+			</div>
+		</div>
 	</div>
 
 </div>

@@ -1,0 +1,13 @@
+<div class='container'>
+	<%= form_for @trainer do |f| %>
+		First Name: <%= f.text_field :first_name %><br><br>
+		Last Name: <%= f.text_field :last_name %><br><br>
+		Bio: <%= f.text_area :bio %><br><br>
+		Featured? <%= f.check_box :is_featured %><br><br>
+		upload photo <%= f.file_field :photo %><br><br>
+		<%= f.submit "Save", class: "btn btn-primary button" %><br><br>
+<% end %>
+		<%= button_to 'Delete Post', @trainer, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<br><br>
+		<%= link_to 'Cancel', dashboard_trainers_path %>
+</div>

@@ -1,7 +1,7 @@
 class Dashboard::TrainersController < ApplicationController
 
   def index
-  	@trainers = Trainer.all
+    @trainers = Trainer.all
   end
 
   def new
@@ -11,8 +11,14 @@ class Dashboard::TrainersController < ApplicationController
   def create
     trainer = Trainer.new(trainer_params)
     if trainer.save
-      redirect_to '/dashboard/trainers'
+      redirect_to dashboard_trainers_path
+    # else
+    #   flash[:alert] = "Email is already in use."
     end
+  end
+
+  def edit
+    @trainer = Trainer.find(params[:id])
   end
 
   private
