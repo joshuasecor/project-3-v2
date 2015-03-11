@@ -1,0 +1,13 @@
+<div class='container'>
+	<%= form_for @appointment do |f| %>
+		Day: <%= f.collection_select(:weekday_id, Weekday.all, :id, :name, prompt: true) %><br><br>
+		Start time: <%= f.time_select :start_time %><br><br>
+		End time: <%= f.time_select :end_time %><br><br>
+		Service: <%= f.collection_select( :service_id, Service.all, :id, :name, prompt: true ) %><br><br>
+		Trainer: <%= f.collection_select( :trainer_id, Trainer.all, :id, :full_name, prompt: true ) %><br><br>
+		<%= f.submit "Save" %><br><br>
+	<% end %>
+		<%= button_to 'Delete Post', @appointment, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<br><br>
+		<%= link_to 'Cancel', dashboard_appointments_path %>
+</div>
