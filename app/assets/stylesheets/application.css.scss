@@ -14,17 +14,26 @@
  *= require_self
  */
 @import 'bootstrap';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
 $background-color: #f6f6f6;
 
 
 .container{
-  background-color: #f6f6f6;
+  $background-color: #f6f6f6;
 } 
 
 // HEADER
 .header{
 	margin-top: 20px;
+}
+
+a{
+  color:#414042; 
+  text-decoration:none;
+}
+a:hover{
+  color:#00b9ce;
 }
 
 .nav_links{
@@ -35,12 +44,14 @@ $background-color: #f6f6f6;
   text-align: left;
   float: left;
   width: 50%;
+  color: #414042;
 }
 
 .right_header{
   text-align: right;
   float: right;
   width: 50%;
+  color: #414042;
 }
 
 // FOOTER
