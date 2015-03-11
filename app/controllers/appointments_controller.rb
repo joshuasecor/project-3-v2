@@ -5,6 +5,11 @@ class AppointmentsController < ApplicationController
     @trainers = Trainer.all
   end
 
+  def show
+    @appointment = Appointment.find(params[:id])
+    render json: @appointment
+  end
+
   def update
     @appointment = Appointment.find(params[:id])
     @appointment.update_attributes(appointment_params)
