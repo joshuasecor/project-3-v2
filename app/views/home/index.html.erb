@@ -27,67 +27,21 @@
 	<br><br>
 	<hr>
 	MEET THE INSTRUCTORS AT BRANCH STUDIO: <br><br>
-	<div id="teacher_carousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-  <% @trainers.each_with_index do |t, index| %>
-    <li data-target="#teacher_carousel" data-slide-to="<%= index + 1 %>" class="<%= index == 0 ? 'active' : ''%>"></li>
-  <% end %>
-  </ol>
- 
-  
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox"> 
-    <% @trainers.each_with_index do |t, index| %>
-    <div class="<%= index == 0 ? 'item active' : 'item' %>">
-
+    <div class="row">
+    <div class="col-sm-1"><img src="/assets/rightarrow.png"></div>
+    <div class="col-sm-10">
       <div class="row">
-        <div class="col-sm-4"><a href="#x"><img src="<%= t.photo.url %>" alt="Image" class="img-responsive"></a>
-          <div class="carousel-caption"><%= link_to (t.first_name + ' ' + t.last_name), t %></div>
+      <!-- replace the trainers.each with paperclip link to images -->
+        <div class="trainerpics"><div class="indtrainer"><% @trainers.each_with_index do |t, index| %>
+            <div class="col-sm-1"><a href="/trainers"><%=image_tag("Trainer01.png") %></a>
+              <div class="carousel-caption"><%= link_to (t.first_name + ' ' + t.last_name), t %></div>
+            </div>
+        <% end %>
         </div>
-    </div>
-  </div>
-  <% end %>
-  <!-- Controls -->
-  <a class="left carousel-control" href="#teacher_carousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#teacher_carousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-</div> <!-- Carousel -->
-    <!-- __________________________________________________________________________________ -->
-    <div id="teacher_carousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-    <% @trainers.each_with_index do |t, index| %>
-      <li data-target="#teacher_carousel" data-slide-to="<%= index + 1 %>" class="<%= index == 0 ? 'active' : ''%>"></li>
-    <% end %>
-    </ol>
-   
-  
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox"> 
-      <% @trainers.each_with_index do |t, index| %>
-      <div class="<%= index == 0 ? 'item active' : 'item' %>">
-        <div class="row">
-          <div class="col-sm-4"><a href="#x"><img src="<%= t.photo.url %>" alt="Image" class="img-responsive"></a>
-            <div class="carousel-caption"><%= link_to (t.first_name + ' ' + t.last_name), t %></div>
-          </div>
+        </div>
       </div>
     </div>
-    <% end %>
-    <!-- Controls -->
-    <a class="left carousel-control" href="#teacher_carousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href="#teacher_carousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-  </div> <!-- Carousel -->
-
-
+    <div class="col-sm-1"><img src="/assets/rightarrow.png" id="rightarrow"></div>
 </div>
-
-<br />
+</div>
 

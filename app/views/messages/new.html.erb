@@ -3,13 +3,14 @@
 		<% flash.each do |key, value| %>
 	    <div class="alert alert-<%= key %>"><%= value %></div>
 	  <% end %>
-	 
+	<hr>
 	<div id="submit_form">
 		<h3> CONTACT</h3>
 	  <%= render "contact_form" %>
 	</div>
 
 	<br>
+	<hr>
 	<div id="google_map">
 		<h3> VISIT BRANCH STUDIO </h3>
 		<%= render "layouts/map" %>
