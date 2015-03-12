@@ -52,6 +52,7 @@ body hr{
 .leftHeader{
   text-align: left;
   float: left;
+  margin-top: 15px;
 }
 
 .rightHeader{
@@ -70,6 +71,14 @@ body hr{
 .rightHeader a{
   text-align: right;
   color: #00D5CE;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.rightHeader a:hover{
+  text-align: right;
+  color: #00b9ce;
   font-weight: bold;
   text-decoration: none;
   font-size: 16px;
