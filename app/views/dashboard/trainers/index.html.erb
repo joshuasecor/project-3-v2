@@ -25,10 +25,10 @@
 				<div class="col-md-4 trainer_name">
 						<%= t.full_name %>
 				</div>
-				<div class="col-md-4 trainer_photo">
+				<div class="col-md-4 trainer_avatar">
 					<%=image_tag t.photo.url(:thumb)%>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 trainer_edit">
 					<%= link_to 'Edit', edit_dashboard_trainer_path(t) %>
 				</div>
 				<% end %>
