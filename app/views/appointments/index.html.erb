@@ -45,6 +45,41 @@
 				<% end %>
 			</div>
 	</div>
+	
+	<br><br>
+
+		<div class="services_list">
+			<h3>OUR SERVICES</h3>
+		<div class="row feature_title">
+				<div class="col-md-4">
+					<h4>Class</h4>
+				</div>
+				<div class="col-md-4">
+					<h4>Level</h4>
+				</div>
+				<div class="col-md-4">
+					<h4>Category</h4>
+				</div>
+		</div>
+
+		<div class="services_list">
+			<div class="row">
+				<% @services.order("name").each do |s| %>
+				<div class="col-md-4">
+					<%= s.name %>
+				</div>
+				<div class="col-md-4">
+					<%= s.level.name %>
+				</div>
+				<div class="col-md-4">
+					<%= s.category.name %>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+</div>
 
 </div>
 
