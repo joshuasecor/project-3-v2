@@ -11,7 +11,7 @@
 				<div><%= link_to "Dashboard", '/dashboard', "data-no-turbolink" => true, style: 'color:#f000ec;' %></div>
 			<% end %>
 			<% if current_user != nil %>
-				<%= link_to "Logout", session_path(:current_session), method: :delete %>
+				<div><%= link_to "Logout", session_path(:current_session), method: :delete %></div>
 			<% else %>
 				<a type="button" class="btn" href="#login_modal" data-toggle="modal">SIGN IN</a>
 			<% end %>
