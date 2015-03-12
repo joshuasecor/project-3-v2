@@ -3,6 +3,7 @@ class AppointmentsController < ApplicationController
 	def index
     @appointments = Appointment.all
     @trainers = Trainer.all
+    @services = Service.all
   end
 
   def show
