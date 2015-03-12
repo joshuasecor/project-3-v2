@@ -68,7 +68,7 @@ Appointment.create(service_id: 3, trainer_id: 3, date: '2015-03-20', start_time:
 Appointment.create(service_id: 1, trainer_id: 3, date: '2015-03-20', start_time: '2015-03-20 10:30:00', end_time: '2008-03-20 12:00:00', weekday_id: 5)
 
 # Admin user
-User.create(email: 'admin@branchstudio.com', password: 'password', is_admin: true)
+User.create(email: 'admin@branchstudio.com', password: 'password', first_name: 'Cassandra', last_name: 'Jenson', is_admin: true)
 
 
 

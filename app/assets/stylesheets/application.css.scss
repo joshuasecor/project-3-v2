@@ -13,14 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
 @import 'bootstrap';
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 
 $background: #f6f6f6;
 
+
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: $background;
+  min-width: 500px;
 }
 
 body a{
@@ -33,33 +37,58 @@ body a:hover{
   text-decoration:none;
 }
 
+body hr{
+
+}
+
+
 // HEADER
 .header{
 	margin-top: 20px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
-// .header a{
-//   color:#414042; 
-//   text-decoration:none;
-// }
-
-// .header a:hover{
-//   color:#00b9ce; 
-//   text-decoration:none;
-// }
-
-
-.left_header{
+.leftHeader{
   text-align: left;
   float: left;
-  width: 50%;
+  margin-top: 15px;
 }
 
-.right_header{
+.rightHeader{
   text-align: right;
-  float: right;
-  width: 50%;
+  color: #00D5CE;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 16px;
 }
+
+.rightHeader div{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.rightHeader a{
+  text-align: right;
+  color: #00D5CE;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.rightHeader a:hover{
+  text-align: right;
+  color: #00b9ce;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navLinks div{
+  display: inline-block;
+  margin-left: 20px;
+}
+
 
 // FOOTER
 
@@ -68,23 +97,25 @@ body a:hover{
 	width: 100%;
 	position: relative;
 	margin-bottom: 20px; 
+  background-color: #191C1F;
 }
 
 .twitter_share{
-	width: 120px;
+	width: 180px;
 	float: right;
+  margin-top: 5px;
 }
 
 .facebook_share{
 	width: 90px;
 	float: right;
+  margin-top: 5px;
 }
 
 .fb-share-button {
-transform: scale(1.35);
+transform: scale(0.95);
 transform-origin: top left;
 }
-
 
 
 // LOGIN
@@ -178,12 +209,14 @@ transform-origin: top left;
   max-height: 400px;
 }
 
+
 // BUTTONS
 
 .button{
   background-color: #00b9ce;
   color: white;
 }
+
 
 // FONT FOR ALL TYPES
 .font{

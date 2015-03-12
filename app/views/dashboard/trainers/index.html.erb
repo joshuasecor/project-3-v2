@@ -3,26 +3,29 @@
 	<a type="button" class="btn button" href="#new_trainer_modal" data-toggle="modal">+ Add New Trainer</a> 
 	<br><br>
 
-	<div class="trainers_list">
+		<div class="trainer_header">
+		<h3> TRAINERS</h3>
 		<div class="row feature_title">
 				<div class="col-md-4">
-					<h4>Trainer</h4>
+					<h4>Name</h4>
 				</div>
 				<div class="col-md-4">
 					<h4>Photo</h4>
 				</div>
 				<div class="col-md-4">
-					<h4></h4>
+					<h4>Update</h4>
 				</div>
 		</div>
+	</div>
 
-		<div class="trainers_list">
+
+	<div class="trainer_profiles">
 			<div class="row">
-				<% @trainers.order("last_name").each do |t| %>
-				<div class="col-md-4">
-					<%= t.full_name %>
+				<% @trainers.each do |t| %>
+				<div class="col-md-4 trainer_name">
+						<%= t.full_name %>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 trainer_photo">
 					<%=image_tag t.photo.url(:thumb)%>
 				</div>
 				<div class="col-md-4">
@@ -30,7 +33,6 @@
 				</div>
 				<% end %>
 			</div>
-		</div>
 	</div>
 
 </div>
