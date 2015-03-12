@@ -97,20 +97,23 @@ body hr{
 	width: 100%;
 	position: relative;
 	margin-bottom: 20px; 
+  background-color: #191C1F;
 }
 
 .twitter_share{
-	width: 120px;
+	width: 180px;
 	float: right;
+  margin-top: 5px;
 }
 
 .facebook_share{
 	width: 90px;
 	float: right;
+  margin-top: 5px;
 }
 
 .fb-share-button {
-transform: scale(1.35);
+transform: scale(0.95);
 transform-origin: top left;
 }
 
