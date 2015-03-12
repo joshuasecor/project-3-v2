@@ -5,6 +5,7 @@
 		Featured? <%= f.check_box :is_featured %><br><br>
 		Level: <%= f.collection_select( :level_id, Level.all, :id, :name, prompt: true ) %><br><br>
 		Category: <%= f.collection_select( :category_id, Category.all, :id, :name, prompt: true ) %><br><br>
+		Upload Photo <%= f.file_field :photo %><br><br>
 		<%= f.submit "Save", class: "btn btn-primary button" %><br><br>
 	<% end %>
 		<%= button_to 'Delete Post', @service, method: :delete, data: { confirm: 'Are you sure?' } %>
