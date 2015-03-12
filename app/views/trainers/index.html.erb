@@ -1,34 +1,19 @@
 
 <div class="container">
-	<h1>Meet our trainers...</h1>
 
-	<div class="trainer_header">
-		<h3> TRAINERS</h3>
-		<div class="row feature_title">
-				<div class="col-md-4">
-					<h4>Name</h4>
-				</div>
-				<div class="col-md-4">
-					<h4>Bio</h4>
-				</div>
-				<div class="col-md-4">
-					<h4>Photo</h4>
-				</div>
-		</div>
-	</div>
-
+		<h3> MEET THE INSTRUCTORS AT BRANCH</h3>
+		<br><br>
 
 	<div class="trainer_profiles">
 			<div class="row">
 				<% @trainers.each do |t| %>
-				<div class="col-md-4 trainer_name">
-						<%= t.full_name %>
+				<div class="col-md-2 trainer_photo">
+					<%=image_tag t.photo.url(:thumb)%>
 				</div>
-				<div class="col-md-4 trainer_bio">
+				<div class="col-md-10 trainer_info">
+					<br>
+					<strong><%= t.full_name %></strong> <br />
 					<%= t.bio %>
-				</div>
-				<div class="col-md-4 trainer_photo">
-					<%= t.photo %>
 				</div>
 				<% end %>
 			</div>
