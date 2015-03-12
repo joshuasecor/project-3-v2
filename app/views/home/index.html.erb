@@ -8,10 +8,11 @@
 
 	<br><br>
 	<hr>
-	<div class="featured_services">
+	<div class="featuredServices">
 		<% @services.where(is_featured: 'true').each do |s| %>
 		<div>
-			<%= link_to s.name, s %> <br><br>
+      <%= image_tag s.photo.url(:thumb) %>
+			<%= link_to s.name, s %><br><br>
 			<%= s.description %>
 		</div>
 		<br>
