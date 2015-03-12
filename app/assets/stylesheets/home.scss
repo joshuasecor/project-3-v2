@@ -5,3 +5,18 @@
 .hero img{
 	width: 100%;
 }
+
+.trainerpics{
+	width: 100%;
+	overflow-y: hidden;
+	white-space: nowrap;
+	float: none;
+}
+
+.indtrainer{
+	width: 400%;
+	white-space: normal;
+	display: inline-block;
+	position: relative;
+	right: 0;
+}

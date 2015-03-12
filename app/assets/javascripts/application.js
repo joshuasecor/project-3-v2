@@ -15,3 +15,14 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function(){
+$("#rightarrow").click(function() {
+	console.log('click!');
+ $(".indtrainer").animate({
+   right: "+=400"
+ }, 250, function() {
+   // Animation complete.
+ });
+});
+})
