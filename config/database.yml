@@ -80,5 +80,5 @@ test:
 #
 production:
   <<: *default
-  database: project-3_production
+
 
