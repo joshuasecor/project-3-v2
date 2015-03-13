@@ -17,6 +17,7 @@
 @import 'bootstrap';
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
 
 $background: #f6f6f6;
 
@@ -38,7 +39,8 @@ body a:hover{
 }
 
 body hr{
-
+  border-bottom: 2px dashed #00b9ce;
+  margin-bottom: 50px;
 }
 
 
@@ -57,7 +59,7 @@ body hr{
 
 .rightHeader{
   text-align: right;
-  color: #00D5CE;
+  color: #00b9ce;
   font-weight: normal;
   text-decoration: none;
   font-size: 16px;
@@ -70,7 +72,7 @@ body hr{
 
 .rightHeader a{
   text-align: right;
-  color: #00D5CE;
+  color: #00b9ce;
   font-weight: bold;
   text-decoration: none;
   font-size: 16px;
@@ -89,6 +91,33 @@ body hr{
   margin-left: 20px;
 }
 
+//HOMEPAGE
+
+h5, .h5 {
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Open+Sans:400', sans-serif;
+  color: #00b9ce;
+}
+
+h6, .h6 {
+  font-size: 24px;
+  color: #8d8a8a;
+  font-family: 'Open+Sans:400', sans-serif;
+  line-height: 37px;
+}
+
+#leftarrow{
+  margin-bottom: -220px;
+}
+
+#rightarrow{
+  margin-bottom: -220px;
+}
+
+.carousel-caption{
+  text-transform: uppercase;
+}
 
 // FOOTER
 
@@ -207,6 +236,25 @@ transform-origin: top left;
   width: 100% !important;
   height: 100% !important; 
   max-height: 400px;
+}
+
+#message_name{
+  color: white;
+  padding-left: 5px;
+  height: 58px;
+  vertical-align: text-bottom;  
+}
+
+#message_email{
+  color: #ffffff;
+  padding-left: 5px;
+  height: 58px;
+}
+
+#message_content{
+  padding-left: 5px;
+  height: 129px;
+  vertical-align: text-bottom;
 }
 
 

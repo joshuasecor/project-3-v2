@@ -17,12 +17,21 @@
 //= require_tree .
 
 $(document).ready(function(){
-$("#rightarrow").click(function() {
-	console.log('click!');
- $(".indtrainer").animate({
-   right: "+=400"
- }, 250, function() {
-   // Animation complete.
- });
-});
+	$("#rightarrow").click(function() {
+		console.log('click!');
+	$(".indtrainer").animate({
+	   right: "+=400"
+	 }, 250, function() {
+	   // Animation complete.
+	 });
+	});
+	$("#leftarrow").click(function() {
+		console.log('click!');
+	$(".indtrainer").animate({
+	   right: "-=400"
+	 }, 250, function() {
+	   // Animation complete.
+	 });
+	});
+
 })

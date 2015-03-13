@@ -24,12 +24,16 @@ div fieldset  {
 }
 
 .contact_field{
+	border: transparent;
 	position: relative;
 	width: 100%;
 	margin: 1% 0;
+	background-color: #eaeaea;
 }
 
 .contact_message{
+	border: transparent;
+	background-color: #eaeaea;
 	position: relative;
 	width: 100%;
 	margin: 1% 0;
@@ -42,7 +46,9 @@ div fieldset  {
 
 // ABOUT DETAILS
 #contact_about{
-	float:right;
+	float: right;
 }
+
+
 
 
