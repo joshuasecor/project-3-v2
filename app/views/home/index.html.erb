@@ -33,7 +33,7 @@
       <div class="row">
       <!-- replace the trainers.each with paperclip link to images -->
         <div class="trainerpics"><div class="indtrainer"><% @trainers.each_with_index do |t, index| %>
-            <div class="col-sm-1"><a href="/trainers"><%=image_tag("Trainer01.png") %></a>
+            <div class="col-sm-1"><a href="/trainers"><%=image_tag t.photo.url%></a>
               <div class="carousel-caption"><%= link_to (t.first_name + ' ' + t.last_name), t %></div>
             </div>
         <% end %>

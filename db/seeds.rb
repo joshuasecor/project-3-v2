@@ -56,10 +56,33 @@ Weekday.create(name: "Sunday", dow: 7)
 
 
 # New trainers
-Trainer.create(first_name: 'Josh', last_name: 'Secor', bio: 'Josh ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat commodo arcu at dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.', is_featured: true)
-Trainer.create(first_name: 'Will', last_name: 'Cebron', bio: 'Will pulvinar nunc ligula, facilisis consequat odio pharetra nec. Suspendisse potenti. Etiam fringilla, quam quis euismod tempor, nulla lectus tincidunt ex, et facilisis erat lectus nec sapien. Nulla facilisi.', is_featured: true)
-Trainer.create(first_name: 'Monique', last_name: 'Wolf', bio: 'Monique consectetur ante enim, sit amet luctus lacus posuere non. Proin et nisi maximus, dictum purus nec, pellentesque mauris. Aliquam pharetra odio et felis ultrices euismod. Aenean vulputate interdum mollis. Ut sem justo, congue id maximus non, ultricies id lacus.', is_featured: true)
+Trainer.create(first_name: 'Josh', last_name: 'Secor', bio: 'Josh ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat commodo arcu at dapibus. 
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer10.png"))
 
+Trainer.create(first_name: 'Will', last_name: 'Cebron', bio: 'Will pulvinar nunc ligula, facilisis consequat odio pharetra nec. Suspendisse potenti. 
+Etiam fringilla, quam quis euismod tempor, nulla lectus tincidunt ex, et facilisis erat lectus nec sapien. Nulla facilisi.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer06.png"))
+
+Trainer.create(first_name: 'Monique', last_name: 'Wolf', bio: 'Monique consectetur ante enim, sit amet luctus lacus posuere non. Proin et nisi maximus, 
+dictum purus nec, pellentesque mauris. Aliquam pharetra odio et felis ultrices euismod. Aenean vulputate interdum mollis. Ut sem justo, congue id maximus non, 
+ultricies id lacus.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer07.png"))
+
+Trainer.create(first_name: 'Jenna', last_name: 'Waltz', bio: 'Jenna ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat commodo arcu at dapibus. 
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer04.png"))
+
+Trainer.create(first_name: 'Maya', last_name: 'Brooks', bio: 'Maya ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat commodo arcu at dapibus. 
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer08.png"))
+
+Trainer.create(first_name: 'Lisa', last_name: 'Turner', bio: 'Lisa ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat commodo arcu at dapibus. 
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer02.png"))
+
+Trainer.create(first_name: 'Michael', last_name: 'Simmons', bio: 'Michael ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat commodo arcu at dapibus. 
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer09.png"))
+
+Trainer.create(first_name: 'Joanie', last_name: 'Andrews', bio: 'Joanie ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat commodo arcu at dapibus. 
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer01.png"))
+
+Trainer.create(first_name: 'Chris', last_name: 'Walters', bio: 'Chris ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat commodo arcu at dapibus. 
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer05.png"))
 
 # New appointments
 Appointment.create(service_id: 1, trainer_id: 1, date: '2015-03-18', start_time: '2015-03-20 08:00:00', end_time: '2008-03-20 09:00:00', weekday_id: 3)
@@ -69,6 +92,5 @@ Appointment.create(service_id: 1, trainer_id: 3, date: '2015-03-20', start_time:
 
 # Admin user
 User.create(email: 'admin@branchstudio.com', password: 'password', first_name: 'Cassandra', last_name: 'Jenson', is_admin: true)
-
 
 
