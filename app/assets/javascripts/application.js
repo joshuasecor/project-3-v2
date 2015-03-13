@@ -17,9 +17,10 @@
 //= require_tree .
 
 $(document).ready(function(){
-	$("#rightarrow").click(function() {
-		console.log('click!');
-	// add if statement here
+
+	var rArrow = $("#rightarrow");
+	    rArrow.click(function() {
+	   console.log("width of container: " + rArrow.width());
 
 
 	$(".indtrainer").animate({
@@ -27,9 +28,8 @@ $(document).ready(function(){
 	 }, 200, function() {
 	   // Animation complete.
 	 });
-		if (nextPhoto.length === 0) {
-	   nextPhoto = $('.slider_item').first();
-}
+	
+
 	});
 	$("#leftarrow").click(function() {
 		console.log('click!');

@@ -64,7 +64,10 @@ Etiam fringilla, quam quis euismod tempor, nulla lectus tincidunt ex, et facilis
 
 Trainer.create(first_name: 'Monique', last_name: 'Wolf', bio: 'Monique consectetur ante enim, sit amet luctus lacus posuere non. Proin et nisi maximus, 
 dictum purus nec, pellentesque mauris. Aliquam pharetra odio et felis ultrices euismod. Aenean vulputate interdum mollis. Ut sem justo, congue id maximus non, 
-ultricies id lacus.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer07.png"))
+ultricies id lacus.', is_featured: true, image_url: "https://s3-us-west-2.amazonaws.com/branchstudio/Icon_fb.png")
+
+
+
 
 Trainer.create(first_name: 'Jenna', last_name: 'Waltz', bio: 'Jenna ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat commodo arcu at dapibus. 
 Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer04.png"))
