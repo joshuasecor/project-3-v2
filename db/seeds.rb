@@ -42,7 +42,7 @@ Service.create(name: 'Candlelight Yoga', description: 'Lorem ipsum dolor sit ame
 
 
 # About data
-About.create(about_text: 'Branch studio ut tortor ac tortor fringilla suscipit. Curabitur non erat faucibus, tincidunt sem a, sollicitudin nunc. Duis fermentum pharetra elementum. Nunc ut luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl vitae elit maximus euismod eu feugiat tortor. Duis fermentum pharetra elementum. Nunc ut luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl vitae elit maximus euismod eu feugiat tortor', address_line_1: '1410 Second Street', address_line_2: '1st Floor', city: 'Santa Monica', state: 'CA', zip: '90401', email: 'info@branchstudio.com', phone: '310-555-7283')
+About.create(about_text: 'Branch studio ut tortor ac tortor fringilla suscipit. Curabitur non erat faucibus, tincidunt sem a, sollicitudin nunc. Duis fermentum pharetra elementum. Nunc ut luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl vitae elit maximus euismod eu feugiat tortor. Duis fermentum pharetra elementum. Nunc ut luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl vitae elit maximus euismod eu feugiat tortor', address_line_1: '1520 Second Street', address_line_2: '1st Floor', city: 'Santa Monica', state: 'CA', zip: '90401', email: 'info@branchstudio.com', phone: '555-555-5555')
 
 
 #Weekday
