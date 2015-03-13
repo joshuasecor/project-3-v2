@@ -19,9 +19,10 @@
 $(document).ready(function(){
 	$("#rightarrow").click(function() {
 		console.log('click!');
+	// add if statement here
 	$(".indtrainer").animate({
 	   right: "+=400"
-	 }, 250, function() {
+	 }, 200, function() {
 	   // Animation complete.
 	 });
 	});
@@ -29,7 +30,7 @@ $(document).ready(function(){
 		console.log('click!');
 	$(".indtrainer").animate({
 	   right: "-=400"
-	 }, 250, function() {
+	 }, 200, function() {
 	   // Animation complete.
 	 });
 	});
