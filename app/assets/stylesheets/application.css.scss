@@ -31,6 +31,7 @@ body {
 body a{
   color:#414042; 
   text-decoration:none;
+  height: 50px;
 }
 
 body a:hover{
@@ -40,6 +41,12 @@ body a:hover{
 
 body hr{
   border-bottom: 2px dashed #00b9ce;
+  margin-bottom: 30px;
+}
+
+h3, .h3 {
+  font-size: 24px;
+  font-family: 'Montserrat:400', sans-serif;
   border-top: 0px;
   margin-bottom: 50px;
 }
@@ -118,6 +125,17 @@ h6, .h6 {
 
 .carousel-caption{
   text-transform: uppercase;
+  margin-bottom: -90px;
+  margin-left: -40px;
+  height: 100px;
+}
+
+.col-sm-1 {
+  width: 8.3333333333%;
+}
+
+.row{
+  height: 300px;
 }
 
 // FOOTER

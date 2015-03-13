@@ -57,7 +57,7 @@ Weekday.create(name: "Sunday", dow: 7)
 
 # New trainers
 Trainer.create(first_name: 'Josh', last_name: 'Secor', bio: 'Josh ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse consequat commodo arcu at dapibus. 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer10.png"))
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis id vulputate odio. Praesent dapibus tincidunt orci id faucibus.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer11.png"))
 
 Trainer.create(first_name: 'Will', last_name: 'Cebron', bio: 'Will pulvinar nunc ligula, facilisis consequat odio pharetra nec. Suspendisse potenti. 
 Etiam fringilla, quam quis euismod tempor, nulla lectus tincidunt ex, et facilisis erat lectus nec sapien. Nulla facilisi.', is_featured: true, :photo => File.new("#{Rails.root}/app/assets/images/Trainer06.png"))
