@@ -1,7 +1,8 @@
 <div class="container">
 
 		<% flash.each do |key, value| %>
-	    <div class="alert alert-<%= key %>"><%= value %></div>
+	    <div id = "flash" class="alert alert-<%= key %>"><%= value %>
+			</div>
 	  <% end %>
 	<hr>
 	<div id="submit_form">
@@ -21,5 +22,12 @@
 			<%= @about.phone %>
 		</div>
 	</div>
-
 </div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  setTimeout(function(){
+    $('#flash').remove();
+  }, 5000);
+ })
+</script>
