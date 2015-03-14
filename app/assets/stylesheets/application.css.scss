@@ -19,19 +19,25 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
 
-$background: #f6f6f6;
+// $background: #f6f6f6;
 
+.container{
+  background-color: #f6f6f6;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: $background;
+  // background-color: $background;
   min-width: 500px;
+  background-color: #f6f6f6;
 }
 
 body a{
   color:#414042; 
   text-decoration:none;
-  height: 50px;
 }
 
 body a:hover{
@@ -41,6 +47,7 @@ body a:hover{
 
 body hr{
   border-bottom: 2px dashed #00b9ce;
+  border-top: 0px;
   margin-bottom: 30px;
 }
 
@@ -137,6 +144,42 @@ h6, .h6 {
 .row{
   height: 300px;
 }
+
+#featuredServiceContainer{
+  font-family: 'Open Sans', sans-serif;
+  color: #8d8a8a;
+}
+
+.featuredService{
+  width: 50%;
+  float: left;
+  padding: 20px;
+  border: solid 15px #f6f6f6;
+  background-color: white;
+}
+
+.featuredService a{
+  color:#00b9ce; 
+  text-decoration:none;
+}
+
+.serviceImage img{
+  width: 40%;
+  min-width: 200px;
+  float: left;
+  margin-right: 15px;
+}
+
+.serviceText{
+
+}
+
+.learnMore{
+  padding: 15px;
+  text-align: right;
+  font-size: 12px;
+}
+
 
 // FOOTER
 
