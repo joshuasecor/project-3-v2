@@ -60,6 +60,15 @@ h3, .h3 {
 
 
 // HEADER
+
+.navbar {
+  margin-bottom: 0;
+}
+
+ul.nav a:hover{
+  color: #00b9ce !important;
+}
+
 .header{
 	margin-top: 20px;
   font-weight: bold;
@@ -165,10 +174,13 @@ h6, .h6 {
 
 .featuredService{
   width: 50%;
+  min-width: 450px;
   float: left;
   padding: 20px;
   border: solid 15px #f6f6f6;
   background-color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .featuredService a{
@@ -193,6 +205,10 @@ h6, .h6 {
   font-size: 12px;
 }
 
+.aboutText{
+  clear: both;
+}
+
 
 // FOOTER
 
@@ -200,7 +216,8 @@ h6, .h6 {
 	float: right;
 	width: 100%;
 	position: relative;
-	margin-bottom: 20px; 
+	padding-bottom: 20px; 
+  padding-top: 20px;
   background-color: #191C1F;
 }
 
