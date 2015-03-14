@@ -17,23 +17,28 @@
 //= require_tree .
 
 $(document).ready(function(){
+	var lasttrainer= $("div.trainerpics div.indtrainer>div:last")[0];
+	var mydiv= $("div.trainerpics div.indtrainer")[0];
 	$("#rightarrow").click(function() {
-		console.log('click!');
-	// add if statement here
 
 
-	$(".indtrainer").animate({
-	   right: "+=400"
-	 }, 200, function() {
-	   // Animation complete.
-	 });
+		$(".indtrainer").animate({
+		   right: "+=400"
+		 }, 200, function() {
+		   // Animation complete.
+		 });
 		if (nextPhoto.length === 0) {
-	   nextPhoto = $('.slider_item').first();
-}
+	  	nextPhoto = $('.slider_item').first();
+		}
 	});
 	$("#leftarrow").click(function() {
 		console.log('click!');
 	$(".indtrainer").animate({
+
+	
+	// mydiv.style.right = (((lasttrainer.offsetLeft + lasttrainer.clientWidth) - mydiv.parentElement.clientWidth).toString() + "px");
+
+
 	   right: "-=400"
 	 }, 200, function() {
 	   // Animation complete.
