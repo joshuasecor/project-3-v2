@@ -5,17 +5,15 @@
 
 <div class="container">
 
-	<div id="featuredServiceContainer">
-		<% @services.where(is_featured: 'true').each do |s| %>
-		<div class="featuredService">
-      <div class="serviceImage"><%= image_tag s.photo.url(:medium) %></div>
-			<div class="serviceText">
-				<%= s.description %>
-				<div class="learnMore"><%= link_to 'LEARN MORE', s %></div>
-			</div>
-		</div>
-		<% end %>
-	</div>
+    <% @services.where(is_featured: 'true').each do |s| %>
+    <div class="col-sm-6">
+      <div class="thumbnail">
+        <img><%= image_tag s.photo.url(:medium) %></img>
+        <div class="caption"><%= s.description %></div>
+        <div class="learnMore"><%= link_to 'LEARN MORE', services_path, "data-no-turbolink" => true  %></div>
+      </div>
+    </div>
+    <% end %>
 
 	<div class="aboutText">
     <br><hr>

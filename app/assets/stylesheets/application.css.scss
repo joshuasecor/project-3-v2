@@ -205,10 +205,29 @@ h6, .h6 {
   font-size: 12px;
 }
 
+.learnMore a{
+  color:#00b9ce; 
+  text-decoration:none;
+}
+
 .aboutText{
   clear: both;
 }
 
+.thumbnail{
+  overflow: hidden;
+  padding: 15px;
+}
+
+.thumbnail img{
+  width: 40%;
+  float: left;
+  margin-right: 15px;
+}
+
+.caption{
+  font-family: 'Open Sans', sans-serif;
+}
 
 // FOOTER
 
