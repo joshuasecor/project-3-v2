@@ -67,9 +67,15 @@ h3, .h3 {
 }
 
 .leftHeader{
-  text-align: left;
+  // text-align: left;
   float: left;
-  margin-top: 15px;
+  // margin-top: 15px;
+  width: 500px;
+  height: 40px;
+  vertical-align: middle;
+  margin: 0 auto;
+  position: relative;
+  // border: solid black 1px;
 }
 
 .rightHeader{
@@ -78,6 +84,13 @@ h3, .h3 {
   font-weight: normal;
   text-decoration: none;
   font-size: 16px;
+  width: 475px;
+  // border: solid black 1px;
+  float: right;
+  padding-top: 5px;
+  height: 40px;
+  vertical-align: middle;
+  margin: 0 auto;
 }
 
 .rightHeader div{
