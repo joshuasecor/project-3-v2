@@ -34,15 +34,15 @@ Category.create(name: 'Other')
 
 
 # New services
-Service.create(name: 'Power Yoga', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero. Vivamus a magna eget sapien facilisis mattis in id risus. Duis arcu risus, porta in imperdiet eu, venenatis id diam.', is_featured: true, level_id: 3, category_id: 3)
+Service.create(name: 'Power Yoga', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero.', is_featured: true, level_id: 3, category_id: 3, :photo => File.new("#{Rails.root}/app/assets/images/Service_01.jpg"))
 
-Service.create(name: 'Ashtanga Vinyasa', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero. Vivamus a magna eget sapien facilisis mattis in id risus. Duis arcu risus, porta in imperdiet eu, venenatis id diam.', is_featured: true, level_id: 2, category_id: 7)
+Service.create(name: 'Ashtanga Vinyasa', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero.', is_featured: true, level_id: 2, category_id: 7, :photo => File.new("#{Rails.root}/app/assets/images/Service_02.jpg"))
 
-Service.create(name: 'Candlelight Yoga', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero. Vivamus a magna eget sapien facilisis mattis in id risus. Duis arcu risus, porta in imperdiet eu, venenatis id diam.', is_featured: true, level_id: 1, category_id: 6)
+Service.create(name: 'Candlelight Yoga', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur efficitur auctor tortor. Proin ex nunc, posuere non venenatis ac, eleifend id libero. Vivamus a magna eget sapien facilisis mattis in id risus. Duis arcu risus, porta in imperdiet eu, venenatis id diam.', is_featured: false, level_id: 1, category_id: 6, :photo => File.new("#{Rails.root}/app/assets/images/Service_03.jpg"))
 
 
 # About data
-About.create(about_text: 'Branch studio ut tortor ac tortor fringilla suscipit. Curabitur non erat faucibus, tincidunt sem a, sollicitudin nunc. Duis fermentum pharetra elementum. Nunc ut luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl vitae elit maximus euismod eu feugiat tortor. Duis fermentum pharetra elementum. Nunc ut luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id nisl vitae elit maximus euismod eu feugiat tortor', address_line_1: '1520 Second Street', address_line_2: '1st Floor', city: 'Santa Monica', state: 'CA', zip: '90401', email: 'info@branchstudio.com', phone: '555-555-5555')
+About.create(about_text: 'Branch studio is a physical and meditative discipline that combines postures (asanas), breath (pranayama), and the chanting of mantras. Kundalini refers to the energy that lays dormant at the base of the spine. Through the practice of yoga, this energy is raised and travels up the spine, through the chakras, creating an overall sense of well being and a heightened sense of awareness. The word Kundalini literally translates as a coiled female serpent.', address_line_1: '1520 Second Street', address_line_2: '1st Floor', city: 'Santa Monica', state: 'CA', zip: '90401', email: 'info@branchstudio.com', phone: '555-555-5555')
 
 
 #Weekday
@@ -91,6 +91,6 @@ Appointment.create(service_id: 3, trainer_id: 3, date: '2015-03-20', start_time:
 Appointment.create(service_id: 1, trainer_id: 3, date: '2015-03-20', start_time: '2015-03-20 10:30:00', end_time: '2008-03-20 12:00:00', weekday_id: 5)
 
 # Admin user
-User.create(email: 'admin@branchstudio.com', password: 'password', first_name: 'Cassandra', last_name: 'Jenson', is_admin: true)
+User.create(email: 'admin@branchstudio.com', password: 'password', first_name: 'Admin', is_admin: true)
 
 
