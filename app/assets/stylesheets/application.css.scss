@@ -132,7 +132,7 @@ ul.nav a:hover{
 /*//HOMEPAGE*/
 
 #home { 
-  background: url(CarouselTop_02.png) 50% 0 repeat fixed; max-height: 390px; 
+  background: data-asset-url(CarouselTop_02.png) 50% 0 repeat fixed; max-height: 390px; 
   height: 390px; 
   margin: 0 auto; 
   width: 100%; 
