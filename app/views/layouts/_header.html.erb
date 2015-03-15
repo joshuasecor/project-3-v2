@@ -1,11 +1,23 @@
 <div class="container">
+
 	<div class="header">
+
+		<div class="leftHeader">
+			<div class="navLinks">
+				<%= link_to(image_tag("Branch_logo_sm.png"), '/home', "data-no-turbolink" => true) %>
+				<div><%= link_to 'BRANCH STUDIO', '/home', "data-no-turbolink" => true  %></div>
+				<div><%= link_to 'SERVICES', appointments_path, "data-no-turbolink" => true  %></div>
+				<div><%= link_to 'TRAINERS', trainers_path, "data-no-turbolink" => true %></div>
+				<div><%= link_to 'CONTACT', contact_path, "data-no-turbolink" => true %></div>
+			</div>
+		</div>
+
 		<div class="rightHeader">
 			<div><%= link_to(image_tag("Icon_fb_2.png"), 'https://www.facebook.com/') %></div>
 			<div><%= link_to(image_tag("Icon_insta.png"), 'https://instagram.com/') %></div>
 			<div><%= link_to(image_tag("Icon_twitter.png"), 'https://twitter.com/') %></div>
 			<% if current_user != nil %>
-				<div>Welcome, <%= current_user.first_name %>!</div>
+				<div><%= current_user.first_name %></div>
 			<% end %>
 			<% if current_user != nil && current_user.is_admin? %>
 				<div><%= link_to "Dashboard", '/dashboard', "data-no-turbolink" => true, style: 'color:#f000ec;' %></div>
@@ -16,15 +28,7 @@
 				<a type="button" class="btn" href="#login_modal" data-toggle="modal">SIGN IN</a>
 			<% end %>
 		</div>
-		<div class="leftHeader">
-			<div class="navLinks">
-				<%= link_to(image_tag("Branch_logo_sm.png"), '/home', "data-no-turbolink" => true) %>
-				<div><%= link_to 'BRANCH STUDIO', '/home', "data-no-turbolink" => true  %></div>
-				<div><%= link_to 'SERVICES', appointments_path, "data-no-turbolink" => true  %></div>
-				<div><%= link_to 'TRAINERS', trainers_path, "data-no-turbolink" => true %></div>
-				<div><%= link_to 'CONTACT', contact_path, "data-no-turbolink" => true %></div>
-			</div>
-		</div>
+
 	</div>
 </div>
 

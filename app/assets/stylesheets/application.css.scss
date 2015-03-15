@@ -14,7 +14,8 @@
  *= require_self
  */
 
-@import 'bootstrap';
+@import "bootstrap";
+@import "compass";
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
@@ -60,6 +61,15 @@ h3, .h3 {
 
 
 // HEADER
+
+.navbar {
+  margin-bottom: 0;
+}
+
+ul.nav a:hover{
+  color: #00b9ce !important;
+}
+
 .header{
 	margin-top: 20px;
   font-weight: bold;
@@ -67,9 +77,15 @@ h3, .h3 {
 }
 
 .leftHeader{
-  text-align: left;
+  // text-align: left;
   float: left;
-  margin-top: 15px;
+  // margin-top: 15px;
+  width: 500px;
+  height: 40px;
+  vertical-align: middle;
+  margin: 0 auto;
+  position: relative;
+  // border: solid black 1px;
 }
 
 .rightHeader{
@@ -78,6 +94,13 @@ h3, .h3 {
   font-weight: normal;
   text-decoration: none;
   font-size: 16px;
+  width: 475px;
+  // border: solid black 1px;
+  float: right;
+  padding-top: 5px;
+  height: 40px;
+  vertical-align: middle;
+  margin: 0 auto;
 }
 
 .rightHeader div{
@@ -107,6 +130,23 @@ h3, .h3 {
 }
 
 //HOMEPAGE
+
+#home { 
+  background: url(CarouselTop_02.png) 50% 0 repeat fixed; max-height: 390px; 
+  height: 390px; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1200px; 
+  position: relative; 
+}
+ 
+#home article { 
+  // height: 458px; 
+  position: absolute; 
+  text-align: center; 
+  top: 75px; 
+  width: 100%; 
+}
 
 h5, .h5 {
   font-size: 24px;
@@ -152,10 +192,13 @@ h6, .h6 {
 
 .featuredService{
   width: 50%;
+  min-width: 450px;
   float: left;
   padding: 20px;
   border: solid 15px #f6f6f6;
   background-color: white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .featuredService a{
@@ -178,8 +221,35 @@ h6, .h6 {
   padding: 15px;
   text-align: right;
   font-size: 12px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
 
+.learnMore a{
+  color:#00b9ce; 
+  text-decoration:none;
+}
+
+.aboutText{
+  clear: both;
+}
+
+.thumbnail{
+  overflow: hidden;
+  padding: 15px;
+}
+
+.thumbnail img{
+  width: 35%;
+  float: left;
+  margin-right: 15px;
+}
+
+.caption{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
 
 // FOOTER
 
@@ -187,7 +257,8 @@ h6, .h6 {
 	float: right;
 	width: 100%;
 	position: relative;
-	margin-bottom: 20px; 
+	padding-bottom: 20px; 
+  padding-top: 20px;
   background-color: #191C1F;
 }
 
@@ -333,4 +404,45 @@ transform-origin: top left;
   color: #8d8a8a;
 }
 
+
+.jumbotron{
+  margin-bottom:0 !important;
+  background:rgba(255,255,255,.9) !important;
+}
+.fluid_container{
+  background:rgb(15,16,18);
+}
+
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
+    background:rgb(20,20,20);
+}
+.parallax__group {
+    height: 260px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease 0s;
+    z-index:100;
+    height:70%;
+}
+.parallax__layer {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.parallax__layer--base {
+    transform: translateZ(0px);
+    z-index: 4;
+}
+.parallax__layer--back {
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+    height:100%;
+}
 
