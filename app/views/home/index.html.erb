@@ -1,7 +1,15 @@
 
-<div class="hero">
-    <%= image_tag("CarouselTop_02.png") %>
-</div>
+
+</script>
+
+<section id="home" data-type="background" data-speed="10" class="pages">     
+  <article>
+    <div id="welcomeBox">
+      <%= image_tag("Branch_logo.png") %>
+    </div>
+  </article>
+</section>   
+
 
 <div class="container">
 
@@ -10,7 +18,7 @@
       <div class="thumbnail">
         <img><%= image_tag s.photo.url(:medium) %></img>
         <div class="caption"><%= s.description %></div>
-        <div class="learnMore"><%= link_to 'LEARN MORE', services_path, "data-no-turbolink" => true  %></div>
+        <div class="learnMore"><%= link_to 'LEARN MORE', appointments_path, "data-no-turbolink" => true  %></div>
       </div>
     </div>
     <% end %>
@@ -54,3 +62,5 @@
 
 </div>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script src="jquery.parascroll.js"></script> 

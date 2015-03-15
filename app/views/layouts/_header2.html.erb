@@ -21,7 +21,6 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to(image_tag("Icon_fb_2.png"), 'https://www.facebook.com/') %></li>
-        <li><%= link_to(image_tag("Icon_insta.png"), 'https://instagram.com/') %></li>
         <li><%= link_to(image_tag("Icon_twitter.png"), 'https://twitter.com/') %></li>
 				<% if current_user != nil && current_user.is_admin? %>
 					<li><%= link_to "Dashboard", '/dashboard', "data-no-turbolink" => true, style: 'color:#f000ec;' %></li>
