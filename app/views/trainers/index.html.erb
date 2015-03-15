@@ -1,24 +1,21 @@
 
 <div class="container">
-<hr>
 
-		<h3> MEET THE INSTRUCTORS AT BRANCH</h3>
-		<br><br>
-
-	<div id="trainer_info">
+	<h3> MEET THE INSTRUCTORS AT BRANCH</h3>
+	<% @trainers.each do |t| %>
+		<div id="trainer_info">
 			<div class="row">
-				<% @trainers.each do |t| %>
 				<div class="col-md-2 trainer_photo">
 					<%=image_tag t.photo.url(:thumb)%>
 				</div>
 				<div class="col-md-10 trainer_info">
-					<br>
-					<strong><%= t.full_name %></strong> <br />
+					<strong><%= t.full_name %></strong> <br>
 					<%= t.bio %>
 				</div>
-				<% end %>
 			</div>
-	</div>
+		</div>
+		<hr>
+	<% end %>
 
 </div>
 <br />
