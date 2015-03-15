@@ -20,29 +20,38 @@ $(document).ready(function(){
 	var lasttrainer= $("div.trainerpics div.indtrainer>div:last")[0];
 	var mydiv= $("div.trainerpics div.indtrainer")[0];
 	$("#rightarrow").click(function() {
-
-
-		$(".indtrainer").animate({
-		   right: "+=400"
-		 }, 200, function() {
-		   // Animation complete.
-		 });
-		if (nextPhoto.length === 0) {
-	  	nextPhoto = $('.slider_item').first();
+		var right= mydiv.style.right;
+		if (parseInt(right.replace("px", ""))>=((lasttrainer.offsetLeft + lasttrainer.clientWidth) - mydiv.parentElement.clientWidth))
+		{
+			mydiv.style.right = ("0px");
 		}
+		else {
+			$(".indtrainer").animate({
+	   		right: "+=400"
+	 		}, 200, function() {
+	   // Animation complete.
+	 		});
+			if (nextPhoto.length === 0) {
+		  	nextPhoto = $('.slider_item').first();
+			}
+		}
+
+
 	});
 	$("#leftarrow").click(function() {
 		console.log('click!');
-	$(".indtrainer").animate({
-
-	
-	// mydiv.style.right = (((lasttrainer.offsetLeft + lasttrainer.clientWidth) - mydiv.parentElement.clientWidth).toString() + "px");
-
-
-	   right: "-=400"
-	 }, 200, function() {
-	   // Animation complete.
-	 });
+		var right= mydiv.style.right;
+		if (parseInt(right.replace("px", ""))<=0 )
+		{
+			mydiv.style.right = (((lasttrainer.offsetLeft + lasttrainer.clientWidth) - mydiv.parentElement.clientWidth).toString() + "px");
+		}
+		else {
+			$(".indtrainer").animate({
+		   right: "-=400"
+		 }, 200, function() {
+		   // Animation complete.
+		 });
+		}
 	});
 
 })

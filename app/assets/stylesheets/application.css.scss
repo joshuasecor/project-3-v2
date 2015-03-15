@@ -106,7 +106,7 @@ h3, .h3 {
   margin-left: 20px;
 }
 
-//HOMEPAGE
+/*//HOMEPAGE*/
 
 h5, .h5 {
   font-size: 24px;
@@ -130,19 +130,19 @@ h6, .h6 {
   margin-bottom: -220px;
 }
 
+.trainerpics{
+  height: 280px;
+}
+
 .carousel-caption{
   text-transform: uppercase;
   margin-bottom: -90px;
-  margin-left: -40px;
   height: 100px;
+  width: 251px;
 }
 
 .col-sm-1 {
   width: 8.3333333333%;
-}
-
-.row{
-  height: 300px;
 }
 
 #featuredServiceContainer{
