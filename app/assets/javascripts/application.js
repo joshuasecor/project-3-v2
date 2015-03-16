@@ -27,7 +27,7 @@ $(document).ready(function(){
 		}
 		else {
 			$(".indtrainer").animate({
-	   		right: "+=400"
+	   		right: "+=320"
 	 		}, 200, function() {
 	   // Animation complete.
 	 		});
