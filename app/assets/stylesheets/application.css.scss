@@ -390,6 +390,18 @@ transform-origin: top left;
   max-height: 400px;
 }
 
+#panel {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: -180px;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+// What is this for?!
 #message_name{
   color: white;
   padding-left: 5px;
@@ -464,4 +476,38 @@ transform-origin: top left;
     z-index: 3;
     height:100%;
 }
+
+/*changed the margin bottom*/
+h3, .h3 {
+  font-size: 24px;
+  font-family: 'Montserrat:400', sans-serif;
+  border-top: 0px;
+  margin-bottom: 20px;
+}
+
+
+/*changed the margin-bottom, height and right */
+.carousel-caption{
+  text-transform: uppercase;
+  margin-bottom: -117px;
+  height: 110px;
+  right: 43%;
+}
+
+
+/*changed background-color*/
+.footer{
+  float: right;
+  width: 100%;
+  position: relative;
+  padding-bottom: 20px; 
+  padding-top: 20px;
+  background-color: #414042;
+}
+
+/*added this to get rid of the border on the button*/
+.btn-primary {
+  border-color: transparent;
+}
+
 
