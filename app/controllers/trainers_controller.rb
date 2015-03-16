@@ -2,6 +2,10 @@ class TrainersController < ApplicationController
 
   def index
     @trainers = Trainer.all
+     respond_to do |format|
+        format.html{}
+        format.json{ render json: @trainers }
+      end
   end
 
 	def show
