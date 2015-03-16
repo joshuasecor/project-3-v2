@@ -8,7 +8,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="navbar-brand"><%= link_to 'BRANCH STUDIO', '/home', "data-no-turbolink" => true  %></div>
+      <div class="navbar-brand">
+        <div><%= link_to 'BRANCH STUDIO', '/home', "data-no-turbolink" => true  %></div>
+      </div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -39,13 +41,20 @@
 
 <div class="modal fade" id="login_modal">
   <div class="modal-header">
+    Welcome to Branch Studio
     <a class="close" data-dismiss="modal">&times;</a>
-    <h3>Login</h3>
   </div>
   <div class="modal-body">
-	  <%= render "layouts/login" %>
+    <h6>Login</h6>
+    <div id="loginPartial">
+	    <%= render "layouts/login" %>
+    </div>
 	  <hr>
-	  <h3>Signup</h3>
+    <div id="signupPartial">
+	    <h6>Signup</h6>
+    </div>
 	  <%= render "layouts/signup" %>
   </div>
 </div>
+
+
