@@ -145,11 +145,16 @@ ul.nav a:hover{
 #home { 
   background: asset-data-url('CarouselTop_02_lrg.jpg') 50% 0 repeat fixed; max-height: 390px; 
   height: 390px; 
-  margin: 0 auto; 
+  // margin: 0 auto; 
   width: 100%; 
   background-size: cover;
   // max-width: 1200px; 
   position: relative; 
+}
+
+#welcomeBox{
+  margin-left: 45px;
+  text-align: left;
 }
  
 #home article { 
@@ -175,22 +180,42 @@ h6, .h6 {
 }
 
 #leftarrow{
-  margin-bottom: -220px;
+  // margin-top: -120px;
 }
 
 #rightarrow{
-  margin-bottom: -220px;
+  // margin-top: -120px;
+}
+
+.arrow{
+  height: 300px;
 }
 
 .trainerpics{
   height: 280px;
 }
 
+.img-responsive{
+  max-width: 100%;
+  max-height: 100%;
+  // height: auto;
+}
+
+.indtrainer{
+  height: 300px;
+}
+
+.indtrainerCont{
+  // width: 30%;
+}
+
 .carousel-caption{
   text-transform: uppercase;
   margin-bottom: -90px;
+  margin-left: -45px;
   height: 100px;
   width: 251px;
+  text-shadow: none;
 }
 
 .col-sm-1 {

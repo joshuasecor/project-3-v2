@@ -2,7 +2,7 @@
 <section id="home" data-type="background" data-speed="10" class="pages">     
   <article>
     <div id="welcomeBox">
-      <%= image_tag("Branch_logo.png") %>
+      <%= image_tag("hero_logoname01_720.png") %>
     </div>
   </article>
 </section>   
@@ -30,31 +30,32 @@
 	<h5>MEET THE INSTRUCTORS AT BRANCH STUDIO</h5>
 	<br><br>
   <div class="row">
-    <div class="col-sm-1"><%= image_tag("leftarrow.png", id: "leftarrow") %>
+    <div class="col-sm-1 col-xs-1"><div class="arrow"><br><br><br><%= image_tag("leftarrow.png", id: "leftarrow", :class => "img-responsive") %></div>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-10 col-xs-10">
       <div class="row">
-      <!-- replace the trainers.each with paperclip link to images -->
         <div class="trainerpics">
         	<div class="indtrainer"><% @trainers.each_with_index do |t, index| %>
-            <div class="col-sm-1">
-            	<a href="/trainers"><%=image_tag t.photo.url%></a>
-              <div class="carousel-caption"><%= link_to (t.first_name + ' ' + t.last_name), t %>
+            <div class="col-sm-1 col-xs-1">
+              <div class="indtrainerCont">
+            	  <a href="/trainers"><%=image_tag t.photo.url, :class => "img-responsive" %></a>
+                <div class="carousel-caption"><%= link_to (t.first_name + ' ' + t.last_name), trainers_path %>
+                </div>
               </div>
             </div>
-        <% end %>
+          <% end %>
        		</div>
     		</div>
     	</div>
   	</div>
     <div class="row">
-    	<div class="col-sm-1"><%= image_tag("rightarrow.png", id: "rightarrow") %>
+    	<div class="col-sm-1 col-xs-1"><div class="arrow"><br><br><br><%= image_tag("rightarrow.png", id: "rightarrow", :class => "img-responsive") %></div>
     	</div>
     	<!-- <div class="col-sm-10"> -->
 <!--     		<div class="row">
   			</div>   -->
 			</div>
-		</div>
+		</div><br>
 	</div>
 
 </div>
