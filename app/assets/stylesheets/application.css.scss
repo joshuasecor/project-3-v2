@@ -56,7 +56,7 @@ h3, .h3 {
   font-size: 24px;
   font-family: 'Montserrat:400', sans-serif;
   border-top: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 
@@ -185,9 +185,9 @@ h6, .h6 {
 
 .carousel-caption{
   text-transform: uppercase;
-  margin-bottom: -90px;
-  height: 100px;
-  width: 251px;
+  margin-bottom: -117px;
+  height: 110px;
+  right: 43%;
 }
 
 .col-sm-1 {
@@ -268,7 +268,7 @@ h6, .h6 {
 	position: relative;
 	padding-bottom: 20px; 
   padding-top: 20px;
-  background-color: #191C1F;
+  background-color: #414042;
 }
 
 .twitter_share{
@@ -404,7 +404,11 @@ transform-origin: top left;
 
 .button{
   background-color: #00b9ce;
-  color: white;
+  color: #fff;
+}
+
+.btn-primary {
+  border-color: transparent;
 }
 
 
